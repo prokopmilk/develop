@@ -1,0 +1,73 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+.note {
+  margin: 0 0 20px 0;
+  padding: 15px 30px 15px 15px;
+  border-left: 3px solid #e5e5e5;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+}
+.note h1,
+.note h2,
+.note h3,
+.note h4 {
+  margin-top: 0;
+}
+.note p:last-child {
+  margin-bottom: 0;
+}
+.note code,
+.note .highlight {
+  background-color: #fff;
+}
+.note-success {
+  border-color: #5cb85c;
+  background: #dff0d8;
+}
+.note-success .box-heading {
+  color: #5cb85c;
+}
+.note-warning {
+  border-color: #f0ad4e;
+  background: #fcf8e3;
+}
+.note-warning .box-heading {
+  color: #f0ad4e;
+}
+.note-info {
+  border-color: #5bc0de;
+  background: #d9edf7;
+}
+.note-info .box-heading {
+  color: #5bc0de;
+}
+.note-danger {
+  border-color: #d9534f;
+  background: #f2dede;
+}
+.note-danger .box-heading {
+  color: #d9534f;
+}

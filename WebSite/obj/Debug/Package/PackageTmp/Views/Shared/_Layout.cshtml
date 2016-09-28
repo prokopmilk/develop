@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <META NAME="description" CONTENT="Молочная Ферма г.Прокопьевск - КФХ Васина. с.Терентьевское натуральные молочные продукты от фермеров">
+    <META NAME="keywords" CONTENT="молоко, прокопьевск, терентьевск, кфх, васина, молочная ферма, молочная ферма прокопьевск, заказать молоко, сыр, масло, творог">
+    <title>@ViewBag.Title - КФХ Васина</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <!--Google Analitics-->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80901210-1', 'auto');
+  ga('require', 'linkid');
+  ga('send', 'pageview');
+
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter38564750 = new Ya.Metrika({
+                    id:38564750,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    trackHash:true,
+                    ecommerce:"dataLayer"
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/38564750" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Rating@Mail.ru counter -->
+    <script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "2798137", type: "pageView", start: (new Date()).getTime()});
+(function (d, w, id) {
+  if (d.getElementById(id)) return;
+  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+  ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "topmailru-code");
+    </script>
+    <noscript>
+        <div style="position:absolute;left:-10000px;">
+            <img src="//top-fwz1.mail.ru/counter?id=2798137;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
+        </div>
+    </noscript>
+    <!-- //Rating@Mail.ru counter -->
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+           <div class="navbar-header">
+               <img height="30" src="~/Pictures/LitleLogo.png"/>
+           </div>
+
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               
+                @Html.ActionLink("Молочная ферма", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Каталог", "Catalog", "Home")</li>
+                    <li>@Html.ActionLink("О производителе", "About", "Home")</li>
+                    <li>@Html.ActionLink("Контакты", "Contact", "Home")</li>
+                   
+                </ul>
+           
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+        
+            <p style="color:black">&nbsp;&copy; @DateTime.Now.Year - ИС Молочная Ферма&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Кемеровская обл. Прокопьевский р-он с. Терентьевское</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

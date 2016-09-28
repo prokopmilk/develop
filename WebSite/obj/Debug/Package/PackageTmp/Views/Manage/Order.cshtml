@@ -1,0 +1,399 @@
+﻿@model IEnumerable<WebSite.Models.Order>
+
+@{
+    ViewBag.Title = "Мои заказы";
+    Layout = "~/Views/Shared/_lk.cshtml";
+}
+
+<div class="panel panel-default">
+<div class="panel-heading">
+    <h2>Список заказов</h2>
+</div>
+<div class="panel-body">
+
+    <p>
+        <a href="~/Home/Sale" class="btn btn-primary btn-lg">Оформить новый заказ &raquo;</a>
+    </p>
+    <!--Все заказы-->
+
+    <ul id="homeTabs" class="nav nav-tabs">
+        <li class="active">
+            <a href="#all_product"  data-toggle="tab">Все заказы</a>
+        </li>
+        <li><a href="#s_product" data-toggle="tab">Выполненые</a></li>
+        <li >
+            <a href="#f_product"  data-toggle="tab">Невыполненые</a>
+        </li>
+       
+                <li ><a href="#n_product"  data-toggle="tab">Откланеные</a></li>
+                
+            
+        
+    </ul>
+
+    <div id="homeTabsContent" class="tab-content">
+        <div class="tab-pane fade active in" id="all_product">
+
+            <div class="row">
+                <div class="col-sm-10">
+                    <div class="box">
+                        
+                        <div class="form-group">
+                            <h4 class="underline">Все сделаные заказы</h4>
+                            <table class="table table-striped table-condensed table-bordered">
+                                <tr>
+                                    <th>
+                                        Номер заказа
+                                    </th>
+
+                                    <th>
+                                        Сумма заказа
+                                    </th>
+                                    <th>
+                                        Дата заказа
+                                    </th>
+                                    <th>
+                                        Статус заказа
+                                    </th>
+                                    <th></th>
+                                </tr>
+
+                                @foreach (var item in Model)
+            {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.OrderId)
+                                        </td>
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.TotalSum)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.PurchaseDate)
+                                        </td>
+
+                                        @if (item.StatusOrder)
+                                        {
+                                            if (item.SolveOrder)
+                                            {
+                                                <td class="text-center">
+                                                    <p class="text-success"><strong> ВЫПОЛНЕН </strong></p>
+                                                </td>
+                                            }
+                                            else
+                                            {
+                                                <td class="text-center">
+                                                    <p class="text-danger"><strong> ОТМЕНЕН </strong></p>
+                                                </td>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            if (item.SolveOrder)
+                                            {
+                                                <td class="text-center">
+                                                    <p class="text-success"><strong>ПРИНЯТ</strong></p>
+
+                                                </td>
+                                            }
+                                            else
+                                            {
+                                                <td class="text-center">
+                                                    <p class="text-danger"><strong>НЕВЫПОЛНЕН</strong></p>
+
+                                                </td>
+                                            }
+                                        }
+
+                                        <td>
+                                            @if ((item.StatusOrder) && (!item.SolveOrder))
+                                            {
+                                                <p> </p>
+                                            }
+                                            else
+                                            {@Html.ActionLink("Отменить заказ", "OrderCancel", new { item.OrderId }) }</td>
+                                    </tr>
+                                    }
+
+                            </table>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="tab-pane fade" id="s_product">
+
+            <div class="row">
+                <div class="col-sm-10">
+                    <div class="box">
+                        <h4 class="underline">Выполненые заказы</h4>
+                        <div class="form-group">
+                            <table class="table table-striped table-condensed table-bordered">
+                                <tr>
+                                    <th>
+                                        Номер заказа
+                                    </th>
+
+                                    <th>
+                                        Сумма заказа
+                                    </th>
+                                    <th>
+                                        Дата заказа
+                                    </th>
+                                    <th>
+                                        Статус заказа
+                                    </th>
+                                    <th></th>
+                                </tr>
+
+                                @foreach (var item in Model.Where(x=>x.StatusOrder==true).Where(y=>y.SolveOrder==true) )
+            {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.OrderId)
+                                        </td>
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.TotalSum)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.PurchaseDate)
+                                        </td>
+
+                                        @if (item.StatusOrder)
+                                        {
+                                            if (item.SolveOrder)
+                                            {
+                                                <td class="text-center">
+                                                    <p class="text-success"><strong> ВЫПОЛНЕН </strong></p>
+                                                </td>
+                                            }
+                                            else
+                                            {
+                                                <td class="text-center">
+                                                    <p class="text-danger"><strong> ОТМЕНЕН </strong></p>
+                                                </td>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            if (item.SolveOrder)
+                                            {
+                                                <td class="text-center">
+                                                    <p class="text-danger"><strong>ПРИНЯТ</strong></p>
+
+                                                </td>
+                                            }
+                                            else
+                                            {
+                                                <td class="text-center">
+                                                    <p class="text-success"><strong>НЕВЫПОЛНЕН</strong></p>
+
+                                                </td>
+                                            }
+                                        }
+
+                                        <td>
+
+                                           </td>
+                                    </tr>
+                                    }
+
+                            </table>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                }
+            </div>
+
+
+
+        </div>
+        <div class="tab-pane fade" id="f_product">
+            
+            <div class="row">
+                <div class="col-sm-10">
+                    <div class="box">
+                        <h4 class="underline">Невыполненые заказы</h4>
+                        <div class="form-group">
+                            <table class="table table-striped table-condensed table-bordered">
+                                <tr>
+                                    <th>
+                                        Номер заказа
+                                    </th>
+
+                                    <th>
+                                        Сумма заказа
+                                    </th>
+                                    <th>
+                                        Дата заказа
+                                    </th>
+                                    <th>
+                                        Статус заказа
+                                    </th>
+                                    <th></th>
+                                </tr>
+
+                                @foreach (var item in Model.Where(x=>x.StatusOrder==false))
+            {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.OrderId)
+                                        </td>
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.TotalSum)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.PurchaseDate)
+                                        </td>
+
+                                        @if (item.StatusOrder)
+                                        {
+                                            if (item.SolveOrder)
+                                            {
+                                                <td class="text-center">
+                                                    <p class="text-success"><strong> ВЫПОЛНЕН </strong></p>
+                                                </td>
+                                            }
+                                            else
+                                            {
+                                                <td class="text-center">
+                                                    <p class="text-danger"><strong> ОТМЕНЕН </strong></p>
+                                                </td>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            if (item.SolveOrder)
+                                            {
+                                                <td class="text-center">
+                                                    <p class="text-success"><strong>ПРИНЯТ</strong></p>
+
+                                                </td>
+                                            }
+                                            else
+                                            {
+                                                <td class="text-center">
+                                                    <p class="text-danger"><strong>НЕВЫПОЛНЕН</strong></p>
+
+                                                </td>
+                                            }
+                                        }
+
+                                        <td>
+
+                                            @Html.ActionLink("Отменить заказ", "Delete", new { item.OrderId })|@Html.ActionLink("Просомтреть", "OrderItem", new { item.OrderId })
+                                        </td>
+                                    </tr>
+                                }
+
+                            </table>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="tab-pane fade" id="n_product">
+            
+
+            <div class="row">
+                <div class="col-sm-10">
+                    <div class="box">
+                        <h4 class="underline">Отмененые заказы</h4>
+                        <div class="form-group">
+                            <table class="table table-striped table-condensed table-bordered">
+                                <tr>
+                                    <th>
+                                        Номер заказа
+                                    </th>
+
+                                    <th>
+                                        Сумма заказа
+                                    </th>
+                                    <th>
+                                        Дата заказа
+                                    </th>
+                                    <th>
+                                        Статус заказа
+                                    </th>
+                                    <th></th>
+                                </tr>
+
+                                @foreach (var item in Model.Where(x=>x.StatusOrder==true).Where(y=>y.SolveOrder==false))
+            {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.OrderId)
+                                        </td>
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.TotalSum)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.PurchaseDate)
+                                        </td>
+
+                                        @if (item.StatusOrder)
+                                        {
+                                            if (item.SolveOrder)
+                                            {
+                                                <td class="text-center">
+                                                    <p class="text-success"><strong> ВЫПОЛНЕН </strong></p>
+                                                </td>
+                                            }
+                                            else
+                                            {
+                                                <td class="text-center">
+                                                    <p class="text-danger"><strong> ОТМЕНЕН </strong></p>
+                                                </td>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            if (item.SolveOrder)
+                                            {
+                                                <td class="text-center">
+                                                    <p class="text-success"><strong>ПРИНЯТ</strong></p>
+
+                                                </td>
+                                            }
+                                            else
+                                            {
+                                                <td class="text-center">
+                                                    <p class="text-danger"><strong>НЕВЫПОЛНЕН</strong></p>
+
+                                                </td>
+                                            }
+                                        }
+
+                                        <td>
+
+                                            </td>
+                                    </tr>
+                                }
+
+                            </table>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>

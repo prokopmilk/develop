@@ -1,0 +1,66 @@
+﻿@model WebSite.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Регистрация нового польователя";
+}
+<head>
+    <link type="text/css" rel="stylesheet" href="~/Content/fon.css">
+</head>
+<h2>@ViewBag.Title</h2>
+
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <h4>Создайте свой аккаунт</h4>
+        <hr />
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(m => m.name, new { @class = "col-md-2 control-label" })
+            <div class="col-md-12">
+
+                @Html.TextBoxFor(m => m.name, new { @class = "form-control", @placeholder = "Иванов Иван" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+            <div class="input-group">
+                <span class="input-group-addon">&#64;</span>
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "example@mail.ru" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.PhoneNumber, new { @class = "col-md-2 control-label" })
+            <div class="col-md-12">
+
+                @Html.TextBoxFor(m => m.PhoneNumber, new { @type = "tel", @class = "form-control", @placeholder = "+79231234567" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.city, new { @class = "col-md-2 control-label" })
+            <div class="col-md-12">
+
+                @Html.DropDownListFor(x => x.city, new SelectList(new[] { "Прокопьевск", "Киселевск", "Новокузнецк" }), new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.adres, new { @class = "col-md-2 control-label" })
+            <div class="input-group">
+                <span class="input-group-addon">ул.</span>
+                @Html.TextBoxFor(m => m.adres, new { @class = "form-control", @placeholder = " 3-я Строителей д 25 кв. 12" })
+            </div>
+        </div>
+        
+
+     
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" class="btn btn-default" value="Зарегистрироваться!" />
+            </div>
+        </div>
+    }
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

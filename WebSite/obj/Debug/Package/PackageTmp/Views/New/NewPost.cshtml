@@ -1,0 +1,179 @@
+﻿@model WebSite.Models.NewPost
+@{
+    ViewBag.Title = "Новости";
+    
+}
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!--Loading bootstrap css-->
+    
+   
+    <link type="text/css" rel="stylesheet" href="~/Content/font-awesome.min.css">
+  
+    <link type="text/css" rel="stylesheet" href="~/Content/animate.css">
+    <link type="text/css" rel="stylesheet" href="~/Content/all.css">
+    <link type="text/css" rel="stylesheet" href="~/Content/mainR.css">
+    <link type="text/css" rel="stylesheet" href="~/Content/style-responsive.css">
+ 
+ 
+
+    <title>@ViewBag.Title</title>
+
+</head>
+<div class="row mbl">
+    <div class="col-lg-12">
+
+        <div class="col-md-12">
+            <div id="area-chart-spline" style="width: 100%; height: 300px; display: none; padding: 0px; position: relative;">
+                <canvas class="flot-base" width="1059" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 1059px; height: 300px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 299px; left: 10px;">Jan</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 299px; left: 183px;">Feb</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 299px; left: 356px;">Mar</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 299px; left: 530px;">Apr</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 299px; left: 703px;">May</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 299px; left: 876px;">Jun</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 299px; left: 1049px;">Jul</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 290px; left: 1px;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 250px; left: 1px;">25</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 210px; left: 1px;">50</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 170px; left: 1px;">75</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 130px; left: 1px;">100</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 90px; left: 1px;">125</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 50px; left: 1px;">150</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 10px; left: 1px;">175</div></div></div><canvas class="flot-overlay" width="1059" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 1059px; height: 300px;"></canvas><div class="legend"><div style="position: absolute; width: 0px; height: 0px; top: 15px; right: 15px; opacity: 0.85; background-color: rgb(255, 255, 255);"> </div><table style="position:absolute;top:15px;right:15px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid #ffce54;overflow:hidden"></div></div></td><td class="legendLabel">Upload</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid #01b6ad;overflow:hidden"></div></div></td><td class="legendLabel">Download</td></tr></tbody></table></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-lg-12">
+        <h2>@Model.news.Header</h2>
+        <div class="col-lg-6">
+            <p>
+              @(new HtmlString(Model.news.Text))
+            </p>
+           
+        </div>
+        <div class="col-lg-6">
+            <img src="@Url.Action("GetImage", "New", new { Model.news.id })" width="100%" alt="заголовок" />
+        
+        </div>
+    </div>
+    
+
+
+</div>
+<div class="well">
+   <div class="text-left">
+       @if (User.IsInRole("Administrator") || User.IsInRole("MainAdmin")) {
+    @Html.ActionLink("Редактировать", "Edit", new { Model.news.id })
+           
+       }|
+    @Html.ActionLink("Назад к списку новостей", "Index")
+</div>
+<p class="text-right">
+    @Model.news.DataPub
+    </p>
+</div>    
+
+<div class="row">
+    <div class="col-lg-12">
+        <h2 class="mbxl">Другие новости</h2>
+
+        <div class="row">
+@if (Model.News.Count() >= 4)
+{
+    int i = 0;
+            foreach (var n in Model.News)
+            {
+                i++;
+                <div class="col-lg-3">
+                    <div class="member-team">
+                        <a href="~/New/NewPost/@n.id">
+                            <img class="img-responsive" src="@Url.Action("GetImage", "New", new { n.id })" height="140" alt="заголовок" />
+                        </a>
+                            <h3>
+                                @n.Header
+                                <small>новости компании</small>
+                            </h3>
+                            <p>@n.Description</p>
+                        
+                        
+                    </div>
+                </div>
+                if (i >= 4) { break; }
+            }
+}
+else
+{
+    foreach (var n in Model.News)
+    {
+
+        <div class="col-lg-3">
+            <div class="member-team">
+                 
+                <a href="~/New/NewPost/@n.id">
+                    <img class="img-responsive" src="@Url.Action("GetImage", "New", new { n.id })" height="140" alt="заголовок" />
+                </a>
+                    <h3>
+                        @n.Header
+                        <small>новости компании</small>
+                    </h3>
+               
+                    <p>@n.Description</p>
+               
+</div>
+        </div>
+
+    }
+}
+
+        </div>
+        
+            
+        
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery-migrate-1.2.1.min.js"></script>
+<script src="~/Scripts/jquery-ui.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/bootstrap-hover-dropdown.js"></script>
+<script src="~/Scripts/html5shiv.js"></script>
+<script src="~/Scripts/respond.min.js"></script>
+<script src="~/Scripts/jquery.metisMenu.js"></script>
+<script src="~/Scripts/jquery.slimscroll.js"></script>
+<script src="~/Scripts/jquery.cookie.js"></script>
+<script src="~/Scripts/icheck.min.js"></script>
+<script src="~/Scripts/custom.min.js"></script>
+<script src="~/Scripts/jquery.news-ticker.js"></script>
+<script src="~/Scripts/jquery.menu.js"></script>
+<script src="~/Scripts/pace.min.js"></script>
+<script src="~/Scripts/holder.js"></script>
+<script src="~/Scripts/responsive-tabs.js"></script>
+<script src="~/Scripts/jquery.flot.js"></script>
+<script src="~/Scripts/jquery.flot.categories.js"></script>
+<script src="~/Scripts/jquery.flot.pie.js"></script>
+<script src="~/Scripts/jquery.flot.tooltip.js"></script>
+<script src="~/Scripts/jquery.flot.resize.js"></script>
+<script src="~/Scripts/jquery.flot.fillbetween.js"></script>
+<script src="~/Scripts/jquery.flot.stack.js"></script>
+<script src="~/Scripts/jquery.flot.spline.js"></script>
+<script src="~/Scripts/zabuto_calendar.min.js"></script>
+<script src="~/Scripts/index.js"></script>
+<!--LOADING SCRIPTS FOR CHARTS-->
+<script src="~/Scripts/highcharts.js"></script>
+<script src="~/Scripts/data.js"></script>
+<script src="~/Scripts/drilldown.js"></script>
+<script src="~/Scripts/exporting.js"></script>
+<script src="~/Scripts/highcharts-more.js"></script>
+<script src="~/Scripts/charts-highchart-pie.js"></script>
+<script src="~/Scripts/charts-highchart-more.js"></script>
+<!--CORE JAVASCRIPT-->
+<script src="~/Scripts/main.js"></script>
+<script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-145464-12', 'auto');
+            ga('send', 'pageview');
+
+
+</script>
