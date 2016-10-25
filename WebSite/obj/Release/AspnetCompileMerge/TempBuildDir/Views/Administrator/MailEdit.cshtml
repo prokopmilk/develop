@@ -1,0 +1,105 @@
+﻿@model WebSite.Models.Concrete.EmailSettings
+
+@{
+    ViewBag.Title = "E-Mail";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>E-Mail</h2>
+
+@using (Html.BeginForm("MailEdit", "Administrator"))
+{   @Html.ActionLink("Добавить почтовый ящик", "MailCreate")
+    
+    <div class="form-horizontal">
+        <h4>Настройки Email</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+       
+        <div class="form-group">
+
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+           Почтовый адрес
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MailFromAddress, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MailFromAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Использовать SSL
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.UseSsl)
+                    @Html.ValidationMessageFor(model => model.UseSsl, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            Имя пользователя
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Пароль
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Имя сервера
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ServerName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ServerName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Порт на сервере
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ServerPort, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ServerPort, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Запись в файл
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.WriteAsFile)
+                    @Html.ValidationMessageFor(model => model.WriteAsFile, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            Путь к записываемому файлу
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FileLocation, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FileLocation, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Добавить почтовый ящик", "MailCreate")
+</div>

@@ -1,0 +1,174 @@
+﻿@using Microsoft.AspNet.Identity
+@model WebSite.Models.IndexViewModel
+@{
+    Layout = "~/Views/Shared/_lk.cshtml";
+    ViewBag.Title = "Личный кабинет";
+}
+<p class="text-success">@ViewBag.StatusMessage</p>
+<h2>@ViewBag.Title</h2>
+
+
+<div id="sum_box" class="row mbl">
+    <div class="col-sm-6 col-md-3">
+        <div class="panel profit db mbm">
+            <a href="~/Cart/Index">
+                <div class="panel-body">
+                    <p class="icon">
+                        <i class="icon fa fa-shopping-cart"></i>
+                    </p>
+                    <h4 class="value">
+                        <span data-counter="" data-start="10" data-end="50" data-step="1" data-duration="0">
+                        </span>
+                        <span>@Model.cart.GetCountTovar()</span>
+                    </h4>
+                    <p class="description">
+                        Товаров в вашей корзине
+                    </p>
+                    <div class="progress progress-sm mbn">
+                        <div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                             style="width: @Model.cart.GetCountTovar()0%;" class="progress-bar progress-bar-success">
+                            <span class="sr-only">80% Complete (success)</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+        <div class="panel income db mbm">
+            <a href="~/Cart/Index">
+                <div class="panel-body">
+                    <p class="icon">
+                        <i class="icon fa fa-money"></i>
+                    </p>
+                    <h4 class="value">
+                        <span>@Model.cart.ComputeTotalValue()</span><span> руб</span>
+                    </h4>
+                    <p class="description">
+                        Сумма к оплате
+                    </p>
+                    <div class="progress progress-sm mbn">
+                        <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                             style="width: @Model.cart.ComputeTotalValue()%;" class="progress-bar progress-bar-info">
+                            <span class="sr-only">60% Complete (success)</span>
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+        <div class="panel task db mbm">
+            <a href="~/Manage/Order">
+                <div class="panel-body">
+                    <p class="icon">
+                        <i class="icon fa fa-signal"></i>
+                    </p>
+                    <h4 class="value">
+                        <span>@Model.customer.Orders.Count</span>
+                    </h4>
+                    <p class="description">
+                        Сделано заказов
+                    </p>
+                    <div class="progress progress-sm mbn">
+                        <div role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                             style="width: @Model.customer.Orders.Count%;" class="progress-bar progress-bar-danger">
+                            <span class="sr-only">@Model.customer.Orders.Count% Complete (success)</span>
+                        </div>
+                    </div>
+                </div>
+                </a>
+</div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+        <div class="panel visit db mbm">
+            <div class="panel-body">
+                <p class="icon">
+                    <i class="icon fa fa-group"></i>
+                </p>
+                <h4 class="value">
+                    <span>45</span>
+                </h4>
+                <p class="description">
+                   Членов в вашей группе
+                </p>
+                <div class="progress progress-sm mbn">
+                    <div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+                         style="width: 70%;" class="progress-bar progress-bar-warning">
+                        <span class="sr-only">70% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="note note-warning">
+    <h4 class="box-heading">Внимание!</h4>
+
+    <p>Сайт находится на этапе тестирования, поэтому функционал доступен чатсично(только основные функции). Приносим свои извинения за предоставленые неудобства.</p>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <h2 class="mbxl">Колонка новостей</h2>
+        <a href=@Url.Action("index", "New",null)> <small>другие новости компании</small></a>
+        <div class="row">
+            @if (Model.news.Count() >= 4)
+            {
+                int i = 0;
+                foreach (var n in Model.news)
+                {
+                    i++;
+                    <div class="col-lg-3">
+                        <div class="member-team">
+                            <img class="img-responsive" src="@Url.Action("GetImage", "New", new { n.id })" width="100%" alt="заголовок" />
+
+                            <h3>
+                                @n.Header
+                                <small>новости компании</small>
+                            </h3>
+                            <p>@n.Description</p>
+                            <ul class="social-icons list-unstyled list-inline mbl mtl">
+                                <li><a href="#" data-hover="tooltip" data-original-title="facebook" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" data-hover="tooltip" data-original-title="google Plus" class="googleplus"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#" data-hover="tooltip" data-original-title="skype" class="skype"><i class="fa fa-skype"></i></a></li>
+                                <li><a href="#" data-hover="tooltip" data-original-title="twitter" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    if (i >= 4) { break; }
+                }
+
+            }
+            else
+            {
+                foreach (var n in Model.news)
+                {
+
+                    <div class="col-lg-3">
+                        <div class="member-team">
+                            <img class="img-responsive" src="@Url.Action("GetImage", "New", new { n.id })" width="100%" alt="заголовок" />
+
+                            <h3>
+                                @n.Header
+                                <small>новости компании</small>
+                            </h3>
+                            <p>@n.Description</p>
+                            <ul class="social-icons list-unstyled list-inline mbl mtl">
+                                <li><a href="#" data-hover="tooltip" data-original-title="facebook" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" data-hover="tooltip" data-original-title="google Plus" class="googleplus"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#" data-hover="tooltip" data-original-title="skype" class="skype"><i class="fa fa-skype"></i></a></li>
+                                <li><a href="#" data-hover="tooltip" data-original-title="twitter" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                }
+            }
+
+        </div>
+
+
+
+    </div>
+</div>

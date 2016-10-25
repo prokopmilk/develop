@@ -1,0 +1,75 @@
+﻿@model IEnumerable<WebSite.Models.New>
+    @{ViewBag.Title = "Новости";
+    }
+<div class="panel panel-default">
+    
+    <div class="panel-heading">
+        <h2>Новости компании</h2>
+        @if (User.IsInRole("Administrator") || User.IsInRole("MainAdmin"))
+        {
+        <p>
+    @Html.ActionLink("Создать новость", "Create")
+</p>
+        }
+    </div>
+    <div class="panel-body">
+
+        @foreach (var item in Model)
+        {
+            <div class="jumbotron">
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <img src="@Url.Action("GetImage", "New", new { item.id })" width="100%" alt="заголовок" />
+                    </div>
+                    <div class="col-md-9">
+                        <h1>@item.Header</h1>
+                        <p class="lead">@item.Description</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav role="navigation" class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                                <p class="navbar-brand">Дата публикации: @item.DataPub</p>
+
+                            </div>
+                            <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+
+
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><button type="button" class="btn-lg btn-info ">@Html.ActionLink("Читать", "NewPost", new { item.id })</button></li>
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        if (User.IsInRole("Administrator") || User.IsInRole("MainAdmin"))
+                                        {
+                                            <li class="dropdown">
+                                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Управление новость<b class="caret"></b></a>
+                                                <ul class="dropdown-menu">
+                                                    <li>@Html.ActionLink("Удалить", "Delete", new { item.id })</li>
+                                                    <li>@Html.ActionLink("Редактировать", "Edit", new { item.id })</li>
+                                                    <li>@Html.ActionLink("Просмотреть", "NewPost", new { item.id })</li>
+
+
+                                                </ul>
+                                            </li>
+                                        }
+                                        
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+<button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+
+            </div>
+        }
+    </div>
+</div>

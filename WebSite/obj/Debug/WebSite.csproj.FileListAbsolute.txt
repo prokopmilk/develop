@@ -474,3 +474,4 @@ D:\GIT\prokopmilk\develop\WebSite\obj\Debug\WebSite.Migrations.ReDriveONFreeSQL.
 D:\GIT\prokopmilk\develop\WebSite\obj\Debug\WebSite.csproj.GenerateResource.Cache
 D:\GIT\prokopmilk\develop\WebSite\obj\Debug\Milk.dll
 D:\GIT\prokopmilk\develop\WebSite\obj\Debug\Milk.pdb
+D:\GIT\prokopmilk\develop\WebSite\obj\Debug\WebSite.csprojResolveAssemblyReference.cache

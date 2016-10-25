@@ -6,5 +6,1472 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\website</_PublishTargetUrl>
   </PropertyGroup>
+  <ItemGroup>
+    <File Include="Abstract/IOrderProcessor.cs">
+      <publishTime>10/09/2016 18:57:42</publishTime>
+    </File>
+    <File Include="apiapp.json">
+      <publishTime>10/09/2016 18:57:42</publishTime>
+    </File>
+    <File Include="ApplicationInsights.config">
+      <publishTime>10/09/2016 18:57:42</publishTime>
+    </File>
+    <File Include="App_Start/BundleConfig.cs">
+      <publishTime>10/09/2016 18:57:42</publishTime>
+    </File>
+    <File Include="App_Start/FilterConfig.cs">
+      <publishTime>10/09/2016 18:57:42</publishTime>
+    </File>
+    <File Include="App_Start/IdentityConfig.cs">
+      <publishTime>10/09/2016 18:57:42</publishTime>
+    </File>
+    <File Include="App_Start/NinjectWebCommon.cs">
+      <publishTime>10/09/2016 18:57:42</publishTime>
+    </File>
+    <File Include="App_Start/RouteConfig.cs">
+      <publishTime>10/09/2016 18:57:42</publishTime>
+    </File>
+    <File Include="App_Start/Startup.Auth.cs">
+      <publishTime>10/09/2016 18:57:42</publishTime>
+    </File>
+    <File Include="App_Start/SwaggerConfig.cs">
+      <publishTime>10/09/2016 18:57:42</publishTime>
+    </File>
+    <File Include="bin/Accessibility.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/ActionMailer.Net.dll">
+      <publishTime>10/09/2016 18:57:25</publishTime>
+    </File>
+    <File Include="bin/ActionMailer.Net.Mvc.dll">
+      <publishTime>10/09/2016 18:57:25</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>10/09/2016 18:57:25</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>10/09/2016 18:57:42</publishTime>
+    </File>
+    <File Include="bin/Castle.Core.dll">
+      <publishTime>10/09/2016 18:57:26</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.Core.dll">
+      <publishTime>10/09/2016 20:56:42</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>10/09/2016 18:57:27</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>10/09/2016 18:57:27</publishTime>
+    </File>
+    <File Include="bin/HighchartsExportClient.dll">
+      <publishTime>10/09/2016 18:57:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>10/09/2016 18:57:30</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>10/09/2016 18:57:30</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>10/09/2016 18:57:31</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>10/09/2016 18:57:32</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>10/09/2016 18:57:31</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>10/09/2016 18:57:31</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>10/09/2016 18:57:29</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>10/09/2016 18:57:32</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>10/09/2016 18:57:32</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>10/09/2016 18:57:32</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Mvc.Core.dll">
+      <publishTime>10/09/2016 18:57:45</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Azure.AppService.ApiApps.Service.dll">
+      <publishTime>10/09/2016 18:57:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Build.Framework.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>10/09/2016 18:57:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CSharp.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.IdentityModel.Logging.dll">
+      <publishTime>10/09/2016 18:57:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.IdentityModel.Tokens.dll">
+      <publishTime>10/09/2016 18:57:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>10/09/2016 18:57:37</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>10/09/2016 18:57:37</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>10/09/2016 18:57:37</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
+      <publishTime>10/09/2016 18:57:37</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Google.dll">
+      <publishTime>10/09/2016 18:57:37</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
+      <publishTime>10/09/2016 18:57:37</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>10/09/2016 18:57:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
+      <publishTime>10/09/2016 18:57:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>10/09/2016 18:57:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.XmlTransform.dll">
+      <publishTime>10/09/2016 20:53:17</publishTime>
+    </File>
+    <File Include="bin/Milk.dll">
+      <publishTime>10/25/2016 20:14:43</publishTime>
+    </File>
+    <File Include="bin/Moq.dll">
+      <publishTime>10/09/2016 18:57:38</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>10/09/2016 18:57:39</publishTime>
+    </File>
+    <File Include="bin/Ninject.dll">
+      <publishTime>10/09/2016 18:57:40</publishTime>
+    </File>
+    <File Include="bin/Ninject.Web.Common.dll">
+      <publishTime>10/09/2016 18:57:41</publishTime>
+    </File>
+    <File Include="bin/Ninject.Web.Mvc.dll">
+      <publishTime>10/09/2016 18:57:40</publishTime>
+    </File>
+    <File Include="bin/NuGet.Core.dll">
+      <publishTime>10/09/2016 20:53:22</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>10/09/2016 18:57:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>10/09/2016 18:57:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>10/09/2016 18:57:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>10/09/2016 18:57:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>10/09/2016 18:57:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>10/09/2016 18:57:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>10/09/2016 18:57:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>10/09/2016 18:57:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>10/09/2016 18:57:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>10/09/2016 18:57:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="bin/Swashbuckle.Core.dll">
+      <publishTime>10/09/2016 18:57:41</publishTime>
+    </File>
+    <File Include="bin/System.Collections.Concurrent.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/System.ComponentModel.DataAnnotations.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Configuration.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Configuration.Install.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Data.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Data.Entity.Design.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Data.Entity.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Data.Services.Client.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/System.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Drawing.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/System.EnterpriseServices.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/System.IdentityModel.Tokens.Jwt.dll">
+      <publishTime>10/09/2016 18:57:41</publishTime>
+    </File>
+    <File Include="bin/System.IO.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Net.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.dll">
+      <publishTime>10/09/2016 20:56:08</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>10/09/2016 18:57:32</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.WebRequest.dll">
+      <publishTime>10/09/2016 20:56:08</publishTime>
+    </File>
+    <File Include="bin/System.Reflection.Context.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Runtime.Serialization.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Security.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Transactions.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.Abstractions.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.ApplicationServices.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.DynamicData.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.Entity.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>10/09/2016 18:57:33</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>10/09/2016 18:57:33</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>10/09/2016 18:57:33</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>10/09/2016 18:57:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>10/09/2016 18:57:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>10/09/2016 18:57:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Routing.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.Services.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>10/09/2016 18:57:33</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>10/09/2016 18:57:33</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>10/09/2016 18:57:33</publishTime>
+    </File>
+    <File Include="bin/System.Xml.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/UIAutomationClient.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/UIAutomationProvider.dll">
+      <publishTime>11/05/2015 23:36:48</publishTime>
+    </File>
+    <File Include="bin/WebActivator.dll">
+      <publishTime>10/09/2016 18:57:41</publishTime>
+    </File>
+    <File Include="bin/WebActivatorEx.dll">
+      <publishTime>10/09/2016 18:57:41</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>10/09/2016 18:57:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css.map">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css.map">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Content/catalog.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Content/ErrorStyles.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Content/fon.css">
+      <publishTime>10/22/2016 05:31:49</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>10/25/2016 12:05:59</publishTime>
+    </File>
+    <File Include="Contentnew/all.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/animate.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/bootstrap.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/bootstrap.min.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/catalog.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/control.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/ErrorStyles.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/aero%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/aero.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/aero.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/all.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/blue%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/blue.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/blue.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/flat%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/flat.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/flat.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/green%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/green.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/green.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/grey%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/grey.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/grey.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/orange%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/orange.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/orange.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/pink%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/pink.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/pink.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/purple%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/purple.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/purple.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/red%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/red.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/red.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/yellow%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/yellow.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/flat/yellow.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/fon.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/font-awesome.min.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/futurico/futurico%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/futurico/futurico.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/futurico/futurico.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/introjs.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/jplist-custom.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/jquery-ui-1.10.4.custom.min.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/jquery.news-ticker.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/line/aero.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/line/all.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/line/blue.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/line/green.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/line/grey.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/line/line%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/line/line.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/line/line.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/line/orange.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/line/pink.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/line/purple.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/line/red.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/line/yellow.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/main.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/aero%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/aero.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/aero.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/all.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/blue%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/blue.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/blue.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/green%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/green.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/green.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/grey%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/grey.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/grey.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/minimal%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/minimal.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/minimal.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/orange%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/orange.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/orange.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/pink%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/pink.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/pink.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/purple%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/purple.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/purple.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/red%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/red.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/red.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/yellow%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/yellow.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/minimal/yellow.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/nestable.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/pace.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/polaris/polaris%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/polaris/polaris.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/polaris/polaris.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/Site.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/square/aero%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/square/aero.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/square/aero.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/square/all.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/square/blue%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/square/blue.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/square/blue.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/square/green%402x.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/square/green.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/square/green.png">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/square/grey%402x.png">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Contentnew/square/grey.css">
+      <publishTime>10/09/2016 18:57:52</publishTime>
+    </File>
+    <File Include="Contentnew/square/grey.png">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Contentnew/square/orange%402x.png">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Contentnew/square/orange.css">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Contentnew/square/orange.png">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Contentnew/square/pink%402x.png">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Contentnew/square/pink.css">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Contentnew/square/pink.png">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Contentnew/square/purple%402x.png">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Contentnew/square/purple.css">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Contentnew/square/purple.png">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Contentnew/square/red%402x.png">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Contentnew/square/red.css">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Contentnew/square/red.png">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Contentnew/square/square%402x.png">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Contentnew/square/square.css">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Contentnew/square/square.png">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Contentnew/square/yellow%402x.png">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Contentnew/square/yellow.css">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Contentnew/square/yellow.png">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Contentnew/style-responsive.css">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Contentnew/zabuto_calendar.min.css">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Controllers/AccountController.cs">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Controllers/AdministratorController.cs">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Controllers/CartController.cs">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Controllers/HomeController.cs">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Controllers/MailController.cs">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Controllers/ManageController.cs">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Controllers/NewController.cs">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>10/22/2016 03:05:48</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Global.asax.cs">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="google04531914bdd55da1.html">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="images/avatar/128.jpg">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="images/avatar/48.jpg">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="images/avatar/incog.jpg">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="images/avatar/profile-pic.png">
+      <publishTime>10/09/2016 18:57:53</publishTime>
+    </File>
+    <File Include="Infrastructure/Binders/CartModelBinder.cs">
+      <publishTime>10/09/2016 18:57:54</publishTime>
+    </File>
+    <File Include="Infrastructure/NinjectDependencyResolver.cs">
+      <publishTime>10/09/2016 18:57:54</publishTime>
+    </File>
+    <File Include="Metadata/deploymentTemplates/apiappconfig.azureresource.json">
+      <publishTime>10/09/2016 18:57:54</publishTime>
+    </File>
+    <File Include="Migrations/201608260955369_ReDriveONFreeSQL.cs">
+      <publishTime>10/09/2016 18:57:54</publishTime>
+    </File>
+    <File Include="Migrations/201608260955369_ReDriveONFreeSQL.Designer.cs">
+      <publishTime>10/09/2016 18:57:54</publishTime>
+    </File>
+    <File Include="Migrations/201608260955369_ReDriveONFreeSQL.resx">
+      <publishTime>10/09/2016 18:57:54</publishTime>
+    </File>
+    <File Include="Migrations/Configuration.cs">
+      <publishTime>10/09/2016 18:57:54</publishTime>
+    </File>
+    <File Include="Models/AccountViewModels.cs">
+      <publishTime>10/09/2016 18:57:54</publishTime>
+    </File>
+    <File Include="Models/AllModels.cs">
+      <publishTime>10/09/2016 18:57:54</publishTime>
+    </File>
+    <File Include="Models/Analitics.cs">
+      <publishTime>10/09/2016 18:57:54</publishTime>
+    </File>
+    <File Include="Models/Cart.cs">
+      <publishTime>10/09/2016 18:57:54</publishTime>
+    </File>
+    <File Include="Models/CartIndexViewModel.cs">
+      <publishTime>10/09/2016 18:57:55</publishTime>
+    </File>
+    <File Include="Models/Category.cs">
+      <publishTime>10/09/2016 18:57:55</publishTime>
+    </File>
+    <File Include="Models/Concrete/EmailOrderProcessor.cs">
+      <publishTime>10/09/2016 18:57:55</publishTime>
+    </File>
+    <File Include="Models/Customer.cs">
+      <publishTime>10/09/2016 18:57:55</publishTime>
+    </File>
+    <File Include="Models/IdentityModels.cs">
+      <publishTime>10/09/2016 18:57:55</publishTime>
+    </File>
+    <File Include="Models/MailModel.cs">
+      <publishTime>10/09/2016 18:57:55</publishTime>
+    </File>
+    <File Include="Models/ManageViewModels.cs">
+      <publishTime>10/09/2016 18:57:55</publishTime>
+    </File>
+    <File Include="Models/New.cs">
+      <publishTime>10/09/2016 18:57:55</publishTime>
+    </File>
+    <File Include="Models/Order.cs">
+      <publishTime>10/09/2016 18:57:55</publishTime>
+    </File>
+    <File Include="Models/OrderItem.cs">
+      <publishTime>10/09/2016 18:57:55</publishTime>
+    </File>
+    <File Include="Models/Repository/EFDbContext.cs">
+      <publishTime>10/09/2016 18:57:55</publishTime>
+    </File>
+    <File Include="Models/Repository/Repository.cs">
+      <publishTime>10/09/2016 18:57:55</publishTime>
+    </File>
+    <File Include="Models/SaleModel.cs">
+      <publishTime>10/09/2016 18:57:55</publishTime>
+    </File>
+    <File Include="Models/ShippingDetails.cs">
+      <publishTime>10/09/2016 18:57:55</publishTime>
+    </File>
+    <File Include="Models/Tovar.cs">
+      <publishTime>10/09/2016 18:57:55</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>10/09/2016 20:56:56</publishTime>
+    </File>
+    <File Include="Pictures/2.png">
+      <publishTime>10/09/2016 18:58:05</publishTime>
+    </File>
+    <File Include="Pictures/2vslvdTZ0Ds.jpg">
+      <publishTime>10/09/2016 18:58:05</publishTime>
+    </File>
+    <File Include="Pictures/53146665.jpg">
+      <publishTime>10/09/2016 18:58:06</publishTime>
+    </File>
+    <File Include="Pictures/assorti.jpg">
+      <publishTime>10/09/2016 18:58:06</publishTime>
+    </File>
+    <File Include="Pictures/basket-empty.png">
+      <publishTime>10/09/2016 18:58:06</publishTime>
+    </File>
+    <File Include="Pictures/basket-full.png">
+      <publishTime>10/09/2016 18:58:06</publishTime>
+    </File>
+    <File Include="Pictures/bg11.jpg">
+      <publishTime>10/09/2016 18:58:06</publishTime>
+    </File>
+    <File Include="Pictures/bg7.jpg">
+      <publishTime>10/09/2016 18:58:06</publishTime>
+    </File>
+    <File Include="Pictures/bg_trava.jpg">
+      <publishTime>10/09/2016 18:58:06</publishTime>
+    </File>
+    <File Include="Pictures/BigLogo.bmp">
+      <publishTime>10/09/2016 18:58:06</publishTime>
+    </File>
+    <File Include="Pictures/BtnLogo.png">
+      <publishTime>10/22/2016 05:27:37</publishTime>
+    </File>
+    <File Include="Pictures/cheese.png">
+      <publishTime>10/09/2016 18:58:06</publishTime>
+    </File>
+    <File Include="Pictures/cheese_round.png">
+      <publishTime>10/09/2016 18:58:06</publishTime>
+    </File>
+    <File Include="Pictures/delivery.png">
+      <publishTime>10/09/2016 18:58:06</publishTime>
+    </File>
+    <File Include="Pictures/iphone_Colling.png">
+      <publishTime>10/09/2016 18:58:07</publishTime>
+    </File>
+    <File Include="Pictures/laptop.png">
+      <publishTime>10/09/2016 18:58:07</publishTime>
+    </File>
+    <File Include="Pictures/lisiy.png">
+      <publishTime>10/09/2016 18:58:07</publishTime>
+    </File>
+    <File Include="Pictures/LitleLogo.png">
+      <publishTime>10/24/2016 22:40:44</publishTime>
+    </File>
+    <File Include="Pictures/maslo.png">
+      <publishTime>10/09/2016 18:58:07</publishTime>
+    </File>
+    <File Include="Pictures/milk.png">
+      <publishTime>10/09/2016 18:58:07</publishTime>
+    </File>
+    <File Include="Pictures/mo1.JPG">
+      <publishTime>10/09/2016 18:58:07</publishTime>
+    </File>
+    <File Include="Pictures/mo2.JPG">
+      <publishTime>10/09/2016 18:58:07</publishTime>
+    </File>
+    <File Include="Pictures/mo3.JPG">
+      <publishTime>10/09/2016 18:58:07</publishTime>
+    </File>
+    <File Include="Pictures/mo4.JPG">
+      <publishTime>10/09/2016 18:58:07</publishTime>
+    </File>
+    <File Include="Pictures/mo5.JPG">
+      <publishTime>10/09/2016 18:58:07</publishTime>
+    </File>
+    <File Include="Pictures/P1010178.JPG">
+      <publishTime>10/09/2016 18:58:07</publishTime>
+    </File>
+    <File Include="Pictures/partnery.png">
+      <publishTime>10/09/2016 18:58:07</publishTime>
+    </File>
+    <File Include="Pictures/registrator_box.png">
+      <publishTime>10/09/2016 18:58:07</publishTime>
+    </File>
+    <File Include="Pictures/shopping_cart.png">
+      <publishTime>10/09/2016 18:58:07</publishTime>
+    </File>
+    <File Include="Pictures/sivorotka.png">
+      <publishTime>10/09/2016 18:58:07</publishTime>
+    </File>
+    <File Include="Pictures/slivki.png">
+      <publishTime>10/09/2016 18:58:07</publishTime>
+    </File>
+    <File Include="Pictures/smetana.png">
+      <publishTime>10/09/2016 18:58:08</publishTime>
+    </File>
+    <File Include="Pictures/stati.jpg">
+      <publishTime>10/09/2016 18:58:08</publishTime>
+    </File>
+    <File Include="Pictures/TovarCach.png">
+      <publishTime>10/09/2016 18:58:08</publishTime>
+    </File>
+    <File Include="Pictures/tvorog.png">
+      <publishTime>10/09/2016 18:58:08</publishTime>
+    </File>
+    <File Include="Project_Readme.html">
+      <publishTime>10/09/2016 18:58:08</publishTime>
+    </File>
+    <File Include="Properties/PublishProfiles/.pubxml">
+      <publishTime>10/09/2016 18:58:08</publishTime>
+    </File>
+    <File Include="Properties/PublishProfiles/Default Settings.pubxml">
+      <publishTime>10/09/2016 18:58:08</publishTime>
+    </File>
+    <File Include="Properties/PublishProfiles/FTP.pubxml">
+      <publishTime>10/25/2016 20:11:52</publishTime>
+    </File>
+    <File Include="Properties/PublishProfiles/git.pubxml">
+      <publishTime>10/09/2016 18:58:08</publishTime>
+    </File>
+    <File Include="Properties/PublishProfiles/milk.pubxml">
+      <publishTime>10/25/2016 20:14:34</publishTime>
+    </File>
+    <File Include="Properties/PublishProfiles/prokopmilk%28somee%29.pubxml">
+      <publishTime>10/25/2016 12:50:57</publishTime>
+    </File>
+    <File Include="Properties/PublishProfiles/someeFTP.pubxml">
+      <publishTime>10/09/2016 18:58:09</publishTime>
+    </File>
+    <File Include="roslyn/csc.exe">
+      <publishTime>10/09/2016 18:57:35</publishTime>
+    </File>
+    <File Include="roslyn/csc.exe.config">
+      <publishTime>10/09/2016 18:57:35</publishTime>
+    </File>
+    <File Include="roslyn/csc.rsp">
+      <publishTime>10/09/2016 18:57:35</publishTime>
+    </File>
+    <File Include="roslyn/csi.exe">
+      <publishTime>10/09/2016 18:57:35</publishTime>
+    </File>
+    <File Include="roslyn/csi.rsp">
+      <publishTime>10/09/2016 18:57:35</publishTime>
+    </File>
+    <File Include="roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>10/09/2016 18:57:35</publishTime>
+    </File>
+    <File Include="roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>10/09/2016 18:57:35</publishTime>
+    </File>
+    <File Include="roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>10/09/2016 18:57:35</publishTime>
+    </File>
+    <File Include="roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>10/09/2016 18:57:35</publishTime>
+    </File>
+    <File Include="roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="roslyn/System.AppContext.dll">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="roslyn/System.Collections.Immutable.dll">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="roslyn/System.IO.FileSystem.dll">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="roslyn/System.Reflection.Metadata.dll">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="roslyn/vbc.exe">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="roslyn/vbc.exe.config">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="roslyn/vbc.rsp">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="roslyn/VBCSCompiler.exe">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="roslyn/VBCSCompiler.exe.config">
+      <publishTime>10/09/2016 18:57:36</publishTime>
+    </File>
+    <File Include="Scripts/ai.0.15.0-build58334.js">
+      <publishTime>10/09/2016 18:58:09</publishTime>
+    </File>
+    <File Include="Scripts/ai.0.15.0-build58334.min.js">
+      <publishTime>10/09/2016 18:58:09</publishTime>
+    </File>
+    <File Include="Scripts/apiYandex.js">
+      <publishTime>10/09/2016 18:58:09</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>10/09/2016 18:58:09</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>10/09/2016 18:58:09</publishTime>
+    </File>
+    <File Include="Scripts/exporting.js">
+      <publishTime>10/09/2016 18:58:10</publishTime>
+    </File>
+    <File Include="Scripts/highchart.js">
+      <publishTime>10/09/2016 18:58:10</publishTime>
+    </File>
+    <File Include="Scripts/highcharts.js">
+      <publishTime>10/09/2016 18:58:10</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.0.intellisense.js">
+      <publishTime>10/09/2016 18:58:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.0.js">
+      <publishTime>10/09/2016 18:58:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.0.min.js">
+      <publishTime>10/09/2016 18:58:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.0.min.map">
+      <publishTime>10/09/2016 18:58:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.0.slim.js">
+      <publishTime>10/09/2016 18:58:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.0.slim.min.js">
+      <publishTime>10/09/2016 18:58:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.0.slim.min.map">
+      <publishTime>10/09/2016 18:58:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate-vsdoc.js">
+      <publishTime>10/09/2016 18:58:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>10/09/2016 18:58:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>10/09/2016 18:58:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>10/09/2016 18:58:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>10/09/2016 18:58:12</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.8.3.js">
+      <publishTime>10/09/2016 18:58:12</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>10/09/2016 18:58:12</publishTime>
+    </File>
+    <File Include="Scripts/respond.matchmedia.addListener.js">
+      <publishTime>10/09/2016 18:58:12</publishTime>
+    </File>
+    <File Include="Scripts/respond.matchmedia.addListener.min.js">
+      <publishTime>10/09/2016 18:58:12</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>10/09/2016 18:58:12</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>10/09/2016 18:58:09</publishTime>
+    </File>
+    <File Include="sitemap.sitemap">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Startup.cs">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Account/ConfirmEmail.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginFailure.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Account/ForgotPassword.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Account/ForgotPasswordConfirmation.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Account/Login.cshtml">
+      <publishTime>10/25/2016 19:36:36</publishTime>
+    </File>
+    <File Include="Views/Account/Register.cshtml">
+      <publishTime>10/25/2016 20:01:26</publishTime>
+    </File>
+    <File Include="Views/Account/ResetPassword.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Account/ResetPasswordConfirmation.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Account/SendCode.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Account/VerifyCode.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Administrator/Category.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Administrator/CategoryEdit.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Administrator/Client.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Administrator/ClientEdit.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Administrator/Customer.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Administrator/Index.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Administrator/Mail.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Administrator/MailEdit.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Administrator/Order.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Administrator/OrderEdit.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Administrator/OrderItem.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Administrator/Tovar.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Administrator/TovarEdit.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Administrator/TovarView.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Cart/Checkout.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Cart/Completed.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Cart/CompletedAndNewUser.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Cart/Index.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Cart/Summary.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>10/25/2016 19:33:14</publishTime>
+    </File>
+    <File Include="Views/Home/Catalog.cshtml">
+      <publishTime>10/25/2016 19:33:14</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>10/25/2016 19:33:14</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>10/25/2016 19:33:14</publishTime>
+    </File>
+    <File Include="Views/Home/LetClient.cshtml">
+      <publishTime>10/25/2016 19:33:14</publishTime>
+    </File>
+    <File Include="Views/Home/MakeOrder.cshtml">
+      <publishTime>10/25/2016 19:33:14</publishTime>
+    </File>
+    <File Include="Views/Home/Prodaction.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Home/Sale.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Mail/Account.html.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Views/Mail/AdminMail.html.cshtml">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/Mail/Subscription.html.cshtml">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/Manage/AddPhoneNumber.cshtml">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/Manage/ChangePassword.cshtml">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/Manage/Index.cshtml">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/Manage/ManageLogins.cshtml">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/Manage/Order.cshtml">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/Manage/OrderEdit.cshtml">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/Manage/SetPassword.cshtml">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/Manage/Settings.cshtml">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/Manage/VerifyPhoneNumber.cshtml">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/New/Edit.cshtml">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/New/Index.cshtml">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/New/NewPost.cshtml">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/Shared/Letter.html">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/Shared/Lockout.cshtml">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/Shared/_Admin.cshtml">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/Shared/_CartPartipal.cshtml">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/Shared/_ExternalLoginsListPartial.cshtml">
+      <publishTime>10/25/2016 20:05:26</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>10/25/2016 19:33:10</publishTime>
+    </File>
+    <File Include="Views/Shared/_lk.cshtml">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginForm.cshtml">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/Shared/_MailLetter.cshtml">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/Shared/_UserPartial.cshtml">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>10/09/2016 18:58:13</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/25/2016 20:14:46</publishTime>
+    </File>
+    <File Include="Web.Debug.config">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Web.Release.config">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="Web.sitemap">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="WebSite.csproj">
+      <publishTime>10/25/2016 20:11:56</publishTime>
+    </File>
+    <File Include="WebSite.csproj.user">
+      <publishTime>10/25/2016 20:14:35</publishTime>
+    </File>
+    <File Include="WebSite.ruleset">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+    <File Include="yandex_81ae9f3387e2f604.html">
+      <publishTime>10/09/2016 18:58:14</publishTime>
+    </File>
+  </ItemGroup>
 </Project>

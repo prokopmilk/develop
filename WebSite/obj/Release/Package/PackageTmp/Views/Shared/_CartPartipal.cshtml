@@ -1,0 +1,50 @@
+﻿@model WebSite.Models.Cart
+
+    <div class="col-md-8 well">
+        
+            
+       @if (Model.Lines.Sum(x => x.Quantity) == 0)
+       {
+           <p class="lead text-center">В вашей корзине: пусто</p>
+           <p  class="text-center"><a href="~/Home/Sale/?category=0" class="btn btn-primary btn-lg">Перейти в магазин &raquo;</a></p>
+       }
+       else
+       {
+        <p class="lead" >В вашей корзине:</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Товар</th>
+                        <th>Кол-во</th>
+                        <th class="text-right">Общая цена</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var line in Model.Lines)
+                    {
+                        <tr>
+                            <td class="text-left">@line.tovar.Category</td>
+                            <td class="text-left">@line.Quantity</td>
+                            <td class="text-right">
+                                @((line.Quantity * line.tovar.Price).ToString("# руб"))
+                            </td>
+
+
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+
+                        <td colspan="3" class="text-right">
+                            <strong>Итого: @Model.ComputeTotalValue().ToString("# руб")</strong>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+           
+       }
+       </div>
+
+

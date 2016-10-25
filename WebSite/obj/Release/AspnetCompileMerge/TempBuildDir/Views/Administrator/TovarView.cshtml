@@ -1,0 +1,71 @@
+﻿@model WebSite.Models.TovarAndcategory
+
+@{
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Информация по товару - Админ панель</title>
+</head>
+<body>
+    <div class="row">
+        <h4>Информаци по товару</h4>
+        <hr />
+        <div class="well col-md-4">
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <td>@if (Model.tovar.Pict == null)
+                            {
+                                <div class="form-control-static">Нет картинки...загрузите</div>
+                            }
+                            else
+                            {
+                                <br />
+                                            <img class="img-thumbnail" width="150" height="150" src="@Url.Action("GetImageTovar", "Administrator", new { Model.tovar.Tovar_ID })" />
+                            }</td>
+                            <td>
+                                <h4 style="color:cornflowerblue"> @Model.tovar.Category  @Model.tovar.Volume л(кг) </h4>
+                            </td>
+                           </tr>
+                        <tr>
+                            <td><b>Объем(масса)</b></td>
+                            <td>@Model.tovar.Volume</td>
+                        </tr>
+                        <tr>
+                            <td><b>Цена</b></td>
+                            <td>@Model.tovar.Price</td>
+                        </tr>
+                        <tr>
+                            <td><b>Спец.предложение</b></td>
+                            <td>@if (Model.tovar.HOT)
+                            {
+                                <label class="label-green">АКЦИЯ</label>
+                            }else
+                            {
+                                <text>-</text>
+                            }
+
+                            </td>
+                        </tr>
+                    </thead>
+                </table>
+           
+           
+        </div>
+        <div class="col-md-4">
+    <p class="header-content">Товар принадлежит к категории @Model.category.Category_Name</p>
+    <p class="description">@Model.category.Description</p>
+</div>
+    </div>
+    <p>
+  
+        @Html.ActionLink("Вернуться назад", "Index")
+    </p>
+</body>
+</html>
