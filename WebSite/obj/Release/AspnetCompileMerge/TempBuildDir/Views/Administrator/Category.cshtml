@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebSite.Models.Category>
+
+@{
+    ViewBag.Title = "Категории товаров";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+<div class="panel panel-default">
+<div class="panel-heading">
+    <h3>Категории товаров</h3>
+</div>
+<div class="panel-body">
+
+    <p><a href="~/Administrator/CategoryCreate" class="btn-group-sm btn-primary">Создать новую категорию</a></p>
+        
+   
+    <table class="table table-striped table-condensed table-bordered">
+        <tr>
+            <th>
+                Наименование
+            </th>
+            <th>
+                Описание
+            </th>
+            <th>
+                Изображение
+            </th>
+            <th>Действие</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(item.Category_Name, "CategoryEdit", new { item.Ca_ID })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    <img class="img-thumbnail" width="150" height="150" src="@Url.Action("GetImage", "Administrator", new { item.Ca_ID })" />
+                </td>
+                <td>
+
+                    @Html.ActionLink("Удалить", "CategoryDelete", new {item.Ca_ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+</div>

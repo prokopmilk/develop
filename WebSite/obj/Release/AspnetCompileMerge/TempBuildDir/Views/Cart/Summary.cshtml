@@ -1,0 +1,16 @@
+﻿@model WebSite.Models.Cart
+
+
+<div class="navbar-text navbar-right">
+    <a href="~/Cart/Index" >
+        <u>
+           @if (Model.Lines.Sum(x => x.Quantity)== 0) {
+                <img height="30" src="~/Pictures/basket-empty.png" />
+           }
+           else
+           { <img height="30"  src="~/Pictures/basket-full.png" /> }
+            @Model.Lines.Sum(x => x.Quantity) шт.
+            @Model.ComputeTotalValue().ToString("# руб")
+        </u>
+    </a>
+</div>

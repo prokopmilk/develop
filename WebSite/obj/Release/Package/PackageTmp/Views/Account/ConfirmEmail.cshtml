@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Подтверждение E-mail";
+}
+
+<h2>@ViewBag.Title.</h2>
+<div>
+    <p>
+        Спасибо, что подтвердили свой электронный адресс. Пожалуйста @User.Identity.IsAuthenticated ? @Html.ActionLink("перейдите в личный кабинет", "Index", "Manage", routeValues: null, htmlAttributes: new { id = "loginLink" }) : @Html.ActionLink("войдите под своей учетной записью", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+    </p>
+</div>

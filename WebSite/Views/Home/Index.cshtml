@@ -15,71 +15,62 @@
        </div> 
         </div>
 </div>
-<div class="row">
 
-    <div class="col-md-4">
-        <h2><img src="~/Pictures/assorti.jpg" height=90 alt="Каталог" />Каталог продукции</h2>
-        <p>
-            Ознакомьтесь с нашим обширным ассортиментом продукции. Все товары произведены на домашней ферме из натурального коровьего молока! Все науральное и полезное.
-        </p>
-        <p><a class="btn btn-default" href="~/Home/Catalog">Перейти к каталогу &raquo;</a></p>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2><img src="~/Pictures/catalog_active.png" height=90 id="caH" alt="Каталог" oninput="caH.src='~/Pictures/catalog_active.png'"/>Каталог продукции</h2>
+            <p>
+                Ознакомьтесь с нашим обширным ассортиментом продукции. Все товары произведены на домашней ферме из натурального коровьего молока! Все науральное и полезное.
+            </p>
+            <p><a class="btn btn-default" href="~/Home/Catalog">Перейти к каталогу &raquo;</a></p>
+        </div>
+
+        <div class="col-md-4">
+            <h2><img src="~/Pictures/prod_active.png" height=90 alt="Наше производство" />Наше произодство</h2>
+            <p>Узнайте подробнее о том как происходит процесс приготовления продуктов. Полный производственный путь - от выпаса скота, до доставки к вам в руки. </p>
+            <br /><p><a class="btn btn-default" href="~/Home/Prodaction">Читать подробнее &raquo;</a></p>
+
+        </div>
+        <div class="col-md-4">
+            <h2><img src="~/Pictures/partner_active.png" height=90 />Как стать нашим клиентом</h2>
+
+            <p>Заинтересовались нашей продукцией и хотите стать постоянными клиентами? Тогда узнайте о всех возможностях покупки и доставки товаров.</p>
+            <br />
+            <p><a class="btn btn-default" href="~/Home/LetClient">Читать подробнее &raquo;</a></p>
+        </div>
     </div>
-   
-    <div class="col-md-4">
-        <h2><img src="~/Pictures/2.png" height=90 alt="Наше производство" />Наше произодство</h2>
-        <p>Узнайте подробнее о том как происходит процесс приготовления продуктов. Полный производственный путь - от выпаса скота, до доставки к вам в руки. </p>
-        <br /><p><a class="btn btn-default" href="~/Home/Prodaction">Читать подробнее &raquo;</a></p>
-        
+    <div class="row">
+        <div class="col-md-4">
+            <h2><img src="~/Pictures/reg_active.png" height=90 />Регистрация</h2>
+
+            <p>
+                Для того чтобы осуществить заказ, вам необходимо иметь учетную запись на сайте. Регистрация займет у вас не более минуты.
+            </p>
+
+            <p><span class="btn btn-default">@Html.ActionLink("Зарегистрироваться", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</span></p>
+        </div>
+        <div class="col-md-4">
+            <h2><img src="~/Pictures/order_active.png" height=90 />Как сделать заказ</h2>
+
+            <p>
+                Впервые у нас на сайте и не знаете что делать? Тогда читайте эту статью, в ней мы вам все проясним.
+            </p>
+            <br />
+            <p><a class="btn btn-default" href="~/Home/MakeOrder">Читать подробнее &raquo;</a></p>
+        </div>
+
+        <div class="col-md-4">
+            <h2><img src="~/Pictures/news_active.png" height=90 />Новости компании</h2>
+
+            <p>
+                Следите за нашими обновлениями! Новости, акции, спец.предложения и т.д.
+            </p>
+            <br />
+            <p><a class="btn btn-default" href="~/New/Index">Читать подробнее &raquo;</a></p>
+        </div>
+
     </div>
 
-    <div class="col-md-4">
 
-        <h2><img src="~/Pictures/partnery.png" height=90 />Как стать нашим клиентом</h2>
-
-
-        <p>Заинтересовались нашей продукцией и хотите стать постоянными клиентами? Тогда узнайте о всех возможностях покупки и доставки товаров.</p>
-        <br />
-
-        <p><a class="btn btn-default" href="~/Home/LetClient">Читать подробнее &raquo;</a></p>
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-4">
-
-        <h2><img src="~/Pictures/lisiy.png" height=90 />Регистрация</h2>
-
-
-        <p>
-            Для того чтобы осуществить заказ, вам необходимо иметь учетную запись на сайте. Регистрация займет у вас не более минуты.
-        </p>
-
-
-        <p><span class="btn btn-default">@Html.ActionLink("Зарегистрироваться", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</span></p>
-    </div>
-    <div class="col-md-4">
-
-        <h2><img src="~/Pictures/TovarCach.png" height=90 />Как сделать заказ</h2>
-
-
-        <p>
-            Впервые у нас на сайте и не знаете что делать? Тогда читайте эту статью, в ней мы вам все проясним.
-        </p>
-        <br />
-
-        <p><a class="btn btn-default" href="~/Home/MakeOrder">Читать подробнее &raquo;</a></p>
-    </div>
-  
-    <div class="col-md-4">
-
-        <h2><img src="~/Pictures/stati.jpg" height=90 />Новости компании</h2>
-
-
-        <p>
-            Следите за нашими обновлениями! Новости, акции, спец.предложения и т.д.
-        </p>
-        <br />
-        <p><a class="btn btn-default" href="~/New/Index">Читать подробнее &raquo;</a></p>
-    </div>
-    
-</div>
 

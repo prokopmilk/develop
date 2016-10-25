@@ -1,0 +1,164 @@
+﻿@model WebSite.Models.OrderAndTovarModel
+
+@{
+    ViewBag.Title = "Детали заказа";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>OrderItem</title>
+</head>
+<body>
+    <div class="well">
+        <h4 class="pull-left">Заказ №@Model.Order.OrderId</h4>
+
+
+        @if (Model.Order.StatusOrder)
+        {
+            if (Model.Order.SolveOrder)
+            {
+
+                <p class="pull-right label label-success"> <strong> ВЫПОЛНЕН </strong></p>
+
+            }
+            else
+            {
+
+                <p class="pull-right  label label-danger">
+                    <strong> ОТМЕНЕН </strong>
+                </p>
+            }
+        }
+        else
+        {
+            if (Model.Order.SolveOrder)
+            {
+
+                <p class="pull-right label label-info"><strong>ПРИНЯТ</strong></p>
+
+
+            }
+            else
+            {
+
+                <p class="pull-right label label-warning"><strong>НЕВЫПОЛНЕН</strong></p>
+
+
+            }
+        }
+
+        <br />
+        <hr />
+        <p class="pull-left"><b>Сумма:</b> @Model.Order.TotalSum руб.<br /><i><b>Дата заказа:</b>@Model.Order.PurchaseDate</i> </p>
+        <p class="pull-right"><b>Клиент:</b> @Model.Order.Customer.Name<br /><b>Тел.:</b> @Model.Order.Customer.Phone</p>
+        <br />
+       
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="box">
+
+                <div class="form-group">
+                   
+                    <h2>Товары в заказе</h2>
+                    @foreach (var ITEM in Model.OrderItems)
+                    {
+
+                      <div class="col-md-3">
+                        
+                        <div class="well">
+
+                            <span span class="lead">
+
+
+                               
+                                    @if (ITEM.tovar.Pict == null)
+                                    {
+                                        <img height="120" src="http://placehold.it/200x150/dddddd/ffffff.jpg" />
+                                        <span class="label label-grey">@ITEM.tovar.ToString()</span>
+                                        <hr />
+                                    }
+                                    else
+                                    {
+                                        
+                                        <img height="120" src="@Url.Action("GetImageTovar", "Administrator", new { ITEM.Tovar_ID })" />
+                                        <br />
+                                        <span class="label label-grey">@ITEM.tovar.ToString()</span>
+                                        <hr />
+                                    }
+                              
+                            </span>
+                           
+                           
+
+                                @Html.Hidden("Tovar_ID", ITEM.Tovar_ID)
+                                <input type="number" min="1" class="input-sm" size="2" max="50" step="1" name="Quantity" value="@ITEM.Quantity" />
+                                @Html.Hidden("Quantity")
+                            <button class="btn btn-sm btn-orange pull-right">@Html.ActionLink("Отклонить продукт", "DelProduct", new { ITEM.OrderItemId })</button> 
+
+                          
+
+                        </div>
+                         
+
+                    </div>
+                    }
+                </div>
+                </div>
+            </div>
+        </div>
+    <div class="row">
+        <div class="col-sm-12">
+           
+            <p class="lead"><b>Доставка по адресу:</b> @Model.Order.Customer.City @Model.Order.Customer.Adres</p>
+            <hr />
+            <a href="~/Administrator/Order"><p class="label label-yellow "><< Вернуться к списку закзов</p></a>
+            @if (Model.Order.StatusOrder)
+            {
+                if (Model.Order.SolveOrder)
+                {
+
+                    
+                    <button class="btn btn-lg btn-red pull-right disabled"> Отменить</button>
+                    <button class="btn btn-lg btn-blue pull-right disabled"> Принять</button>
+
+                }
+                else
+                {
+
+                   
+                    <button class="btn btn-lg btn-red pull-right disabled"> Отменить</button>
+                    <button class="btn btn-lg btn-blue pull-right disabled"> Принять</button>
+                }
+            }
+            else
+            {
+                if (Model.Order.SolveOrder)
+                {
+
+                    
+                    <button class="btn btn-lg btn-red pull-right"> @Html.ActionLink(" Отменить заказ", "OrderCancel", new { Model.Order.OrderId })</button>
+                    <button class="btn btn-lg btn-blue pull-right" title="Кнопка не работает">Изменить заказ</button>
+                    <button class="btn btn-lg btn-green pull-right">@Html.ActionLink("Заказ готов ", "OrderFin", new { Model.Order.OrderId }) </button>
+
+
+                }
+                else
+                {
+
+
+                    <button class="btn btn-lg btn-red pull-right">@Html.ActionLink("Отменить", "OrderCancel", new { Model.Order.OrderId })</button>
+                    <button class="btn btn-lg btn-blue pull-right" title="Кнопка не работает">Изменить заказ</button>
+                    <button class="btn btn-lg btn-green pull-right">@Html.ActionLink("Принять заказ", "OrderGet", new { Model.Order.OrderId })</button>
+
+
+                }
+            }
+           
+        </div>
+    </div>
+</body>
+</html>
