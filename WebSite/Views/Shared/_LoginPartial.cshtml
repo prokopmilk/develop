@@ -24,8 +24,9 @@ else
     <ul class="nav navbar-nav navbar-right">
         
         <!--<li>Html.ActionLink("Зарегистрироваться", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>-->
-        <li>@Html.Action("Summary", "Cart")</li>
-        <li>@Html.ActionLink("Войти", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        
+        <li> @Html.ActionLink("Войти", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" }) </li>
+        <li> @Html.Action("Summary", "Cart") </li>
         
     </ul>
 }

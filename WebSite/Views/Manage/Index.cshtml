@@ -106,8 +106,40 @@
 <div class="note note-warning">
     <h4 class="box-heading">Внимание!</h4>
 
-    <p>Сайт находится на этапе тестирования, поэтому функционал доступен чатсично(только основные функции). Приносим свои извинения за предоставленые неудобства.</p>
+    <p>Сайт находится на этапе тестирования, поэтому функционал доступен частично(только основные функции). Приносим свои извинения за предоставленые неудобства.</p>
 </div>
+
+<div class="col-md-4 pull-right">
+    <h2>Соц. сети</h2>
+  
+    
+        <!-- VK Widget -->
+        <div id="vk_groups" class="pull-right"></div>
+        <script type="text/javascript">
+            VK.Widgets.Group("vk_groups", { mode: 4, wide:1,  width: "220", height: "400" }, 125107285);
+        </script>
+   
+  
+    <div id="ok_group_widget" class="pull-right"></div>
+    <script>
+!function (d, id, did, st) {
+  var js = d.createElement("script");
+  js.src = "https://connect.ok.ru/connect.js";
+  js.onload = js.onreadystatechange = function () {
+  if (!this.readyState || this.readyState == "loaded" || this.readyState == "complete") {
+    if (!this.executed) {
+      this.executed = true;
+      setTimeout(function () {
+        OK.CONNECT.insertGroupWidget(id,did,st);
+      }, 0);
+    }
+  }}
+  d.documentElement.appendChild(js);
+}(document,"ok_group_widget","53359790457013",'{"width":305,"height":335}');
+    </script>
+ 
+</div>
+
 <div class="row">
     <div class="col-lg-12">
         <h2 class="mbxl">Колонка новостей</h2>

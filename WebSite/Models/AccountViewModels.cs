@@ -65,6 +65,8 @@ namespace WebSite.Models
     public class RegisterViewModel
     {
         [Required]
+        [RegularExpression("/^[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я-' ]+[a-zA-Zа-яА-Я']?$/u",
+            ErrorMessage = "Некорректное имя")]
         [Display(Name = "Ваше имя и фамилия")]
         public string name { get; set; }
 
@@ -73,6 +75,8 @@ namespace WebSite.Models
         public string city { get; set; }
 
         [Required]
+        [StringLength(50, ErrorMessage = " {0} должен быть по крайней мере {2} символов.",
+            MinimumLength = 10)]
         [Display(Name = "Адрес")]
         public string adres { get; set; }
 
@@ -82,7 +86,8 @@ namespace WebSite.Models
         public string Email { get; set; }
 
         [Required]
-        [StringLength(50, ErrorMessage = " {0} должно быть по крайней мере {2} символов.", MinimumLength = 11)]
+        [StringLength(50, ErrorMessage = " {0} должен быть по крайней мере {2} символов.",
+            MinimumLength = 11)]
         [DataType(DataType.PhoneNumber)]
         [Display(Name = "Телефон")]
         public string PhoneNumber { get; set; }

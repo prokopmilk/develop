@@ -475,3 +475,9 @@ D:\GIT\prokopmilk\develop\WebSite\obj\Debug\WebSite.csproj.GenerateResource.Cach
 D:\GIT\prokopmilk\develop\WebSite\obj\Debug\Milk.dll
 D:\GIT\prokopmilk\develop\WebSite\obj\Debug\Milk.pdb
 D:\GIT\prokopmilk\develop\WebSite\obj\Debug\WebSite.csprojResolveAssemblyReference.cache
+D:\GIT\prokopmilk\develop\WebSite\bin\Duke.Owin.VkontakteMiddleware.dll
+D:\GIT\prokopmilk\develop\WebSite\bin\OAuth2.dll
+D:\GIT\prokopmilk\develop\WebSite\bin\RestSharp.dll
+D:\GIT\prokopmilk\develop\WebSite\bin\RestSharp.xml
+D:\GIT\prokopmilk\develop\WebSite\bin\KatanaContrib.Security.Odnoklassniki.dll
+D:\GIT\prokopmilk\develop\WebSite\bin\KatanaContrib.Security.Odnoklassniki.pdb
