@@ -48,13 +48,18 @@
                         г. @Html.DisplayFor(modelItem => item.City) ул. @Html.DisplayFor(modelItem => item.Adres)
                     </td>
                     <td>
-                        @Html.ActionLink(" Количество:" + item.Orders.Count, "Customer", new { item.CustomerId })
-                       <br />
-					   @if(item.Orders.count >0){
-                       Средняя сумма: @item.Orders.Average(c=>c.TotalSum) руб.
-					   }else{
-					   Средняя сумма: ранее не делал(а) заказы
-					   }
+                       
+					   @if (item.Orders.Count > 0)
+                       { 
+                           @Html.ActionLink(" Количество:" + item.Orders.Count, "Customer", new { item.CustomerId })
+                        <br /><text>Средняя сумма:</text>
+                         @item.Orders.Average(c => c.TotalSum)
+                       }
+                       else
+                       {
+                        <p> ранее не делал(а) заказы</p>
+
+                       }
                     </td>
                     <td>
 

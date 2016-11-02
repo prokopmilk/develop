@@ -20,6 +20,8 @@
     <link type="text/css" rel="stylesheet" href="~/Contentnew/zabuto_calendar.min.css">
     <link type="text/css" rel="stylesheet" href="~/Contentnew/pace.css">
     <link type="text/css" rel="stylesheet" href="~/Contentnew/jquery.news-ticker.css">
+    <!--Vk Widget-->
+    <script type="text/javascript" src="//vk.com/js/api/openapi.js?136"></script>
 
     <title>@ViewBag.Title</title>
     <!--Google Analitics-->
@@ -122,8 +124,13 @@ _tmr.push({id: "2798137", type: "pageView", start: (new Date()).getTime()});
 
                             </li>
                             <li class="dropdown">
-                                <a data-hover="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-envelope fa-fw"></i><span class="badge badge-orange"></span></a>
+                                
 
+                                <!-- VK Widget -->
+                                <div id="vk_community_messages"> Напишите нам в Vk</div>
+                                <script type="text/javascript">
+                                    VK.Widgets.CommunityMessages("vk_community_messages", 125107285, {shown: 0});
+                                </script>
                             </li>
 
                             <li class="dropdown topbar-user">

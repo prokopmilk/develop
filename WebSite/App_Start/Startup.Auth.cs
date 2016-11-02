@@ -6,6 +6,10 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using WebSite.Models;
+using Microsoft.Owin.Security;
+using System.Net.Http;
+using System.Collections.Generic;
+using KatanaContrib.Security.Odnoklassniki;
 
 namespace WebSite
 {
@@ -34,7 +38,7 @@ namespace WebSite
                         validateInterval: TimeSpan.FromMinutes(30),
                         regenerateIdentity: (manager, user) => user.GenerateUserIdentityAsync(manager))
                 }
-            });            
+            });
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
 
             // Enables the application to temporarily store user information when they are verifying the second factor in the two-factor authentication process.
@@ -54,16 +58,19 @@ namespace WebSite
             //consumerKey: "",
             // consumerSecret: "");
 
-            app.UseFacebookAuthentication(
-              appId: "279641945727146",
-               appSecret: "c3908c0a42603648096bf80df98474bd");
 
-            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            app.UseVkontakteAuthentication(new Duke.Owin.VkontakteMiddleware.VkAuthenticationOptions()
             {
-              ClientId = "1066921975300-i59jbsnmdd3kdl9lqv0n2saotdvvalca.apps.googleusercontent.com",
-             ClientSecret = "W0yJ_F1AirR5ba57RMoApvS9"
+                AppId = "5548187",
+                AppSecret = "c1HYw8njs4mtfylgUo7j"
             });
-            
+
+            app.UseOdnoklassnikiAuthentication(new OdnoklassnikiAuthenticationOptions
+            {
+                ClientId = "",
+                ClientSecret=""
+            });
         }
     }
+   
 }

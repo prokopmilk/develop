@@ -81,18 +81,7 @@ namespace WebSite
             return Task.FromResult(0);
         }
     }
-   /* public class MailSettings
-    {
-        public string MailToAddress = "";
-        public string MailFromAddress = "prokopmilk@mail.ru";
-        public bool UseSsl = true;
-        public string Username = "prokopmilk@mail.ru";
-        public string Password = "sale89049680743";
-        public string ServerName = "smtp.mail.ru";
-        public int ServerPort = 25;
-        public bool WriteAsFile = false;
-        public string FileLocation = @"c:\store_emails";
-    }*/
+
 
     public class SmsService : IIdentityMessageService
     {

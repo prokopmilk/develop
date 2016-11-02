@@ -5,10 +5,10 @@
     <a href="~/Cart/Index" >
         <u>
            @if (Model.Lines.Sum(x => x.Quantity)== 0) {
-                <img height="30" src="~/Pictures/basket-empty.png" />
+                <img height="20" src="~/Pictures/basket-empty.png" />
            }
            else
-           { <img height="30"  src="~/Pictures/basket-full.png" /> }
+           { <img height="20"  src="~/Pictures/basket-full.png" /> }
             @Model.Lines.Sum(x => x.Quantity) шт.
             @Model.ComputeTotalValue().ToString("# руб")
         </u>
