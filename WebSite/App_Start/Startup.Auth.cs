@@ -3,12 +3,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.Google;
 using Owin;
 using WebSite.Models;
-using Microsoft.Owin.Security;
-using System.Net.Http;
-using System.Collections.Generic;
 using KatanaContrib.Security.Odnoklassniki;
 
 namespace WebSite
@@ -58,6 +54,7 @@ namespace WebSite
             //consumerKey: "",
             // consumerSecret: "");
 
+            
 
             app.UseVkontakteAuthentication(new Duke.Owin.VkontakteMiddleware.VkAuthenticationOptions()
             {
@@ -65,11 +62,7 @@ namespace WebSite
                 AppSecret = "c1HYw8njs4mtfylgUo7j"
             });
 
-            app.UseOdnoklassnikiAuthentication(new OdnoklassnikiAuthenticationOptions
-            {
-                ClientId = "",
-                ClientSecret=""
-            });
+           
         }
     }
    
