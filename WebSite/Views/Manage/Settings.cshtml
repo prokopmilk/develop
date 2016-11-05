@@ -160,7 +160,7 @@
                                                     }
                                                     else
                                                     {
-                                                        <label class="label-success">@Html.ActionLink("Создать", "SetPassword")</label>
+                                                        <label class="label-primary">@Html.ActionLink("Создать", "SetPassword")</label>
                                                     }
                                                 </div>
                                             </div>
@@ -227,7 +227,7 @@
     {
                                                     @Html.AntiForgeryToken()
                                                     <br />
-                                                    <label class="btn btn-info">@Html.ActionLink("Изменить", "AddPhoneNumber")</label>
+                                                    <label class="btn btn-primary">@Html.ActionLink("Изменить", "AddPhoneNumber")</label>
                                                     <input type="submit" value="Удалить" class="btn btn-danger" />
                                                     }
 
@@ -240,7 +240,12 @@
 
                                                 </div>
                                         </div>
-                                        
+                                        <hr />
+                                        <h3>Интеграция с соц.сетями</h3>
+                                        <div class="form-group">
+                                            @Model.Logins.Count()
+                                            
+                                        </div>
                                         <hr />
                                         <button type="submit" class="btn btn-green btn-block">Сохранить</button>
                                     </form>

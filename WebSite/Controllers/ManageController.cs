@@ -96,6 +96,12 @@ namespace WebSite.Controllers
             model.name = CurUser.name;
             return PartialView(model);
         }
+
+        public PartialViewResult _ExternalLoginsListPartial(string returnUrl)
+        {
+            ViewBag.ReturnUrl = returnUrl;
+            return PartialView();
+        }
         public ActionResult Order()
         {
             Repository repo = new Repository();
