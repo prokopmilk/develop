@@ -65,8 +65,6 @@ namespace WebSite.Models
     public class RegisterViewModel
     {
         [Required]
-        [RegularExpression("/^[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я-' ]+[a-zA-Zа-яА-Я']?$/u",
-            ErrorMessage = "Некорректное имя")]
         [Display(Name = "Ваше имя и фамилия")]
         public string name { get; set; }
 

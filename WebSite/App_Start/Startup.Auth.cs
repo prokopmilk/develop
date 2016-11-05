@@ -64,12 +64,6 @@ namespace WebSite
                 AppId = "5548187",
                 AppSecret = "c1HYw8njs4mtfylgUo7j"
             });
-
-            app.UseOdnoklassnikiAuthentication(new OdnoklassnikiAuthenticationOptions
-            {
-                ClientId = "",
-                ClientSecret=""
-            });
         }
     }
    
