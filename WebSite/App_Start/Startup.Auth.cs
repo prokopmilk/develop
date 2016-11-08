@@ -61,8 +61,15 @@ namespace WebSite
                 AppId = "5548187",
                 AppSecret = "c1HYw8njs4mtfylgUo7j"
             });
-
-           
+            app.UseFacebookAuthentication(
+              appId: "279641945727146",
+               appSecret: "c3908c0a42603648096bf80df98474bd");
+            app.UseOdnoklassnikiAuthentication(new OdnoklassnikiAuthenticationOptions
+            {
+                ClientId = "1247656704",
+                ClientSecret = "99D4F6D8CD75202872E81569",
+                ClientPublic = "CBAMLOFLEBABABABA"
+            });
         }
     }
    
