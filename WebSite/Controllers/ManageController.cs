@@ -133,9 +133,10 @@ namespace WebSite.Controllers
                 message == ManageMessageId.ChangePasswordSuccess ? "Ваш пароль был изменен."
                 : message == ManageMessageId.SetPasswordSuccess ? "Ваш пароль был сохранен."
                 : message == ManageMessageId.SetTwoFactorSuccess ? "Вы включили двухфакторную авторизацию."
-                : message == ManageMessageId.Error ? "Ошибка!"
+                : message == ManageMessageId.Error ? "Ошибка при изменение данных!"
                 : message == ManageMessageId.AddPhoneSuccess ? "Ваш номер телефона добавлен."
                 : message == ManageMessageId.RemovePhoneSuccess ? "Ваш номер тлефона удален."
+                : message == ManageMessageId.ChangeInfo ? "Данные учетной записи были изменены"
                 : "";
 
             var userId = User.Identity.GetUserId();
@@ -143,6 +144,7 @@ namespace WebSite.Controllers
             var model = new SettingsViewModel
             {
                 HasPassword = HasPassword(),
+                Email = this.User.Identity.Name,
                 city = CurUser.city,
                 adres = CurUser.adres,
                 name = CurUser.name,
@@ -152,6 +154,40 @@ namespace WebSite.Controllers
                 BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
             };
             return View(model);
+        }
+        [HttpPost]
+        public async Task<ActionResult> Settings(SettingsViewModel model)
+        {
+            if (model != null)
+            {
+                try
+                {
+                    var userId = User.Identity.GetUserId();
+                    var CurUser = UserManager.Users.FirstOrDefault(us => us.Id == userId);
+                    Repository rep = new Repository();
+                    var client = rep.Customers.FirstOrDefault(cl => cl.Email == CurUser.Email);
+                    CurUser.Email = model.Email;client.Email = model.Email;
+                    CurUser.city = model.city;client.City = model.city;
+                    CurUser.adres = model.adres;client.Adres = model.adres;
+                    CurUser.PhoneNumber = model.PhoneNumber;client.Phone = model.PhoneNumber;
+                    CurUser.name = model.name;client.Name = model.name;
+                    CurUser.UserName = model.Email;
+                    rep.SaveClient(client);
+                    var x = await UserManager.UpdateAsync(CurUser);
+                    ViewBag.StatusMessage = "Данные учетной записи были изменены";
+                    return View(model);
+                }
+                catch (Exception)
+                {
+                    ViewBag.StatusMessage = "Ошибка при изменение данных!";
+                    return View(model);
+                }
+            }
+            else
+            {
+                ViewBag.StatusMessage = "Ошибка при изменение данных!";
+                return View(model);
+            }
         }
         //
         // POST: /Manage/RemoveLogin
@@ -201,7 +237,7 @@ namespace WebSite.Controllers
                 var message = new IdentityMessage
                 {
                     Destination = model.Number,
-                    Body = "ваш код: " + code
+                    Body = "Сайт Молочная Ферма ваш код: " + code
                 };
                 await UserManager.SmsService.SendAsync(message);
             }
@@ -459,7 +495,8 @@ namespace WebSite.Controllers
             SetPasswordSuccess,
             RemoveLoginSuccess,
             RemovePhoneSuccess,
-            Error
+            Error,
+            ChangeInfo
         }
 
 #endregion

@@ -17,6 +17,7 @@ using System.Text;
 using WebSite.Models.Repository;
 using WebSite.Models.Concrete;
 using WebSite.Controllers;
+using Twilio;
 
 namespace WebSite
 {
@@ -88,9 +89,15 @@ namespace WebSite
         public Task SendAsync(IdentityMessage message)
         {
             // Plug in your SMS service here to send a text message.
+            string accountSid = "AC1839b243c5d9d26ff34b154d1e16f717";
+            string authToken = "9af3c22af75794bd75ab01c4a2e37896";
+            string from = "+12052369549";
+            new TwilioRestClient(accountSid, authToken).SendMessage(from, message.Destination, message.Body);
             return Task.FromResult(0);
         }
     }
+
+          
 
     // Configure the application user manager used in this application. UserManager is defined in ASP.NET Identity and is used by the application.
     public class ApplicationUserManager : UserManager<ApplicationUser>

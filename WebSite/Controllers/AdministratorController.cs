@@ -18,55 +18,20 @@ namespace WebSite.Controllers
     [Authorize(Roles="MainAdmin, Administrator")]
     public class AdministratorController : Controller
     {
-        string urlYandex = "https://api-metrika.yandex.com.tr/stat/traffic/summary?id=38564750&oauth_token=AQAAAAAEgPKiAANb8MT2t8wJqkKejG_6IBjNQ7U&date1=20160701";
-
-        XmlDocument visits = new XmlDocument();
+       
         Repository repo = new Repository();
         // GET: Administrator
         public ActionResult Index()
         {
-            List<YandexMetrix> stats = null;
-            try
-            {
-                visits.Load(urlYandex);
-
-                XmlNodeList nodeList = visits.GetElementsByTagName("row");
-                stats = new List<YandexMetrix>();
-
-                foreach (XmlNode item in nodeList)
-                {
-                    YandexMetrix s = new YandexMetrix();
-                    s.Day = DateTime.ParseExact(item["date"].InnerText, "yyyyMMdd", null).ToString();
-                    s.Visits = Convert.ToInt32(item["visits"].InnerText);
-                    s.Visitors = Convert.ToInt32(item["visitors"].InnerText);
-                    s.PageViews = Convert.ToInt32(item["page_views"].InnerText);
-                    s.NewVisitors = Convert.ToInt32(item["new_visitors"].InnerText);
-
-                    stats.Add(s);
-                }
-            }
-            catch (Exception e)
-            {
-                TempData["message"] = string.Format("Не уддалось загрузить данные по аналитике из-за ошибки: {0}", e.Message);
-                stats = new List<YandexMetrix>();
-                YandexMetrix s = new YandexMetrix();
-                s.Day = System.DateTime.Now.ToString();
-                s.Visits = Convert.ToInt32(0);
-                s.Visitors = Convert.ToInt32(0);
-                s.PageViews = Convert.ToInt32(0);
-                s.NewVisitors = Convert.ToInt32(0);
-                stats.Add(s);
-            }
-            ViewBag.Result= new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(stats);
-
+            
             AllModels model = new AllModels()
             {
                 Tovars = repo.Tovars,
                 Categories = repo.Categories,
                 Customers = repo.Customers,
                 Orders = repo.Orders,
-                News = repo.News.Distinct(),
-                stats = stats
+                News = repo.News.Distinct()
+                
                 
             };
             return View(model);

@@ -1,0 +1,70 @@
+﻿@model WebSite.Models.SaleModel
+
+   @{
+       ViewBag.Title = "Каталог товаров";
+}
+
+<div class="row">
+    
+    <h1>Товары <a href="~/Home/Catalog" class="btn btn-default">Поиск по категориям&raquo;</a></h1>
+
+   
+@foreach (var t in Model.Tovars)
+{
+   
+    <div class="col-md-4">
+        <h2>@t.Category</h2>
+        <div class="well">
+            
+            <span span class="lead">
+
+
+                @if (t.HOT)
+                {
+                    if (t.Pict == null)
+                    {
+                        <span class="pull-right label label-primary">Цена:@t.Price.ToString("# руб")</span><img height="120" src="http://placehold.it/200x150/dddddd/ffffff.jpg" /><span class="pull-right label label-danger">Акция</span>
+                    }
+                    else
+                    {
+                        <span class="pull-right label label-primary">Цена:@t.Price.ToString("# руб")</span>
+                        <img height="120" src="@Url.Action("GetImageTovar", "Administrator", new { t.Tovar_ID })" />
+                        <span class="pull-right label label-danger">Акция</span>
+                    }
+                }
+                else
+                {
+                    if (t.Pict == null)
+                    {
+                        <span class="pull-right label label-primary">Цена:@t.Price.ToString("# руб")</span>
+                        <img height="120" src="http://placehold.it/200x150/dddddd/ffffff.jpg" />
+                        <br />
+                    }
+                    else
+                    {
+                           <span class="pull-right label label-primary">Цена:@t.Price.ToString("# руб")</span>
+                            <img height="120" src="@Url.Action("GetImageTovar", "Administrator", new { t.Tovar_ID })" />
+                            <br />
+                    }
+                }
+                Объем(масса): @t.Volume л(кг)
+            </span><br />
+                @using (Html.BeginForm("AddToCart", "Cart"))
+                {
+                    
+                        @Html.Hidden("Tovar_ID", t.Tovar_ID)
+                        @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                        
+                        <input type="number" min="1" class="input-lg" size="2" max="50" step="1" name="quantity" value="1"/>                    
+                        @Html.Hidden("quantity")
+                        <input type="submit" class="btn btn-lg btn-success pull-right" value="Добавить в корзину" />
+                       
+                }
+           
+        </div>
+
+        
+</div>
+       
+    }
+    </div>

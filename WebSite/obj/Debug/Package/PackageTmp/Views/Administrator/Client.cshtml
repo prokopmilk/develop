@@ -1,0 +1,73 @@
+﻿@model IEnumerable<WebSite.Models.Customer>
+
+@{
+    ViewBag.Title = "Клиенты";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2>Список клиентов</h2>
+    </div>
+    <div class="panel-body">
+        
+
+        <p>
+            @Html.ActionLink("Добавить нового клиента", "ClientCreate")
+        </p>
+        <table class="table table-striped table-condensed table-bordered">
+            <tr>
+                <th>
+                    Имя
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Телефон
+                </th>
+                <th>
+                    Адрес
+                </th>
+                <th>Заказы</th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink(item.Name, "ClientEdit", new { item.CustomerId })
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Phone)
+                    </td>
+                    <td>
+                        г. @Html.DisplayFor(modelItem => item.City) ул. @Html.DisplayFor(modelItem => item.Adres)
+                    </td>
+                    <td>
+                       
+					   @if (item.Orders.Count > 0)
+                       { 
+                           @Html.ActionLink(" Количество:" + item.Orders.Count, "Customer", new { item.CustomerId })
+                        <br /><text>Средняя сумма:</text>
+                         @item.Orders.Average(c => c.TotalSum)
+                       }
+                       else
+                       {
+                        <p> ранее не делал(а) заказы</p>
+
+                       }
+                    </td>
+                    <td>
+
+                        @Html.ActionLink("Удалить", "ClientDelete", new { item.CustomerId })
+                    </td>
+                </tr>
+            }
+
+        </table>
+        </div>
+</div>

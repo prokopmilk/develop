@@ -1,0 +1,49 @@
+﻿@model IEnumerable<WebSite.Models.Category>
+@{
+    ViewBag.Title = "Каталог продукции";
+}
+<!DOCTYPE html>
+<html>
+<head>
+   
+
+
+</head>
+<body>
+
+    
+        <div class="row">
+
+            <h1>
+                Каталог
+            </h1>
+
+            <h1> <a href="~/Home/Sale" class="btn btn-default">Просмотреть все товары &raquo;</a></h1>
+
+            @foreach (WebSite.Models.Category pr in Model)
+
+            {<div class="col-md-4">
+
+                <h2>@pr.Category_Name </h2>
+                <p>
+                    <a href="~/Home/Sale/?category=@pr.Category_Name">
+
+                        <img height="200" src="@Url.Action("GetImage", "Administrator", new { pr.Ca_ID })" />
+                    </a>
+                </p>
+
+            </div>
+            }
+            <div class="col-md-4">
+                <h2>Весь ассортимент</h2>
+                <p>
+                    <a href="~/Home/Sale">
+                        <img src="~/Pictures/assortiment.png" height=200 />
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+</body>
+</html>

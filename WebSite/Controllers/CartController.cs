@@ -261,6 +261,15 @@ namespace WebSite.Controllers
             
             return RedirectToAction("Index", new { returnUrl });
         }
+        public RedirectToRouteResult ChangeInCart(Cart cart, int Tovar_ID, int quantity)
+        {
+           
+            if (Tovar_ID > 0)
+            {
+                cart.ChangeCountTovar(Tovar_ID, quantity);
+            }
+            return RedirectToAction("Index");
+        }
 
         public RedirectToRouteResult RemoveFromCart(Cart cart, int Tovar_ID,string returnUrl)
         {

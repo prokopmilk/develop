@@ -1,0 +1,125 @@
+﻿@using WebSite.Models
+@using Microsoft.AspNet.Identity
+@model WebSite.Models.LogRegModel
+@{
+    ViewBag.Title = "Регистрация нового польователя";
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<h2>@ViewBag.Title</h2>
+<div class="row">
+    <div class="col-md-4 pull-left">
+        <section id="loginForm" class="well">
+            @using (Html.BeginForm("RegisterDeluxe", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                
+                <h2>Создайте свой аккаунт</h2>
+                <hr />
+                @Html.ValidationSummary("", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(m => m.name, new { @class = "col-md-4 control-label" })
+                    <div class="input-group col-md-8">
+                        <span class="input-group-addon">
+                            <i class="fa fa-user"></i>
+                        </span>
+                        @Html.TextBoxFor(m => m.name, new { @class = "form-control", @placeholder = "Иванов Иван" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Email, new { @class = "col-md-4 control-label" })
+                    <div class="input-group col-md-8">
+                        <span class="input-group-addon">&#64;</span>
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "example@mail.ru" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.PhoneNumber, new { @class = "col-md-4 control-label" })
+                    <div class="input-group col-md-8">
+                        <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                        @Html.TextBoxFor(m => m.PhoneNumber, new { @type = "tel", @class = "form-control", @placeholder = "+79231234567" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.city, new { @class = "col-md-4 control-label" })
+                    <div class="input-group col-md-8">
+                        <span class="input-group-addon"><i class="fa fa-building-o" aria-hidden="true"></i></span>
+                        @Html.DropDownListFor(x => x.city, new SelectList(new[] { "Прокопьевск", "Киселевск", "Новокузнецк" }), new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.adres, new { @class = "col-md-4 control-label" })
+                    <div class="input-group col-md-8">
+                        <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                        @Html.TextBoxFor(m => m.adres, new { @class = "form-control", @placeholder = " 3-я Строителей д 25 кв. 12" })
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-12">
+                        <input type="submit" class="btn btn-block btn-default pull-left" value="Зарегистрироваться!" />
+                    </div>
+                </div>
+            }
+            <section id="socialLoginForm">
+
+                @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+            </section>
+        </section>
+    </div>
+    <div class="col-md-5">
+        <br />
+        <h2>Добро пожаловать!</h2>
+        <hr />
+        <p style="color:black"><b>Пользователям доступен весьма функциональный личный кабинет. Войдите в систему и вы сможете сделать заказ, узнать ближайшие даты реализации, настроить sms и e-mail рассылки и прочие параметры онлайн системы предзаказа.Пользователям доступен весьма функциональный личный кабинет. Войдите в систему и вы сможете сделать заказ, узнать ближайшие даты реализации, настроить sms и e-mail рассылки и прочие параметры онлайн системы предзаказа.</b></p>
+    </div>
+    <div class="col-md-3 pull-right">
+        <section id="loginForm" class="well">
+            @using (Html.BeginForm("LoginDeluxe", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                <h2>Авторизация</h2>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-9 pull-right">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-9 pull-right">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+
+                        <div class="checkbox">
+
+                            @Html.CheckBoxFor(m => m.RememberMe)
+                            @Html.LabelFor(m => m.RememberMe)
+                            <input type="submit" value="Войти" class="btn btn-default" />
+                        </div>
+
+                        @Html.ActionLink("Забыли пароль?", "ForgotPassword")
+                    </div>
+                </div>
+
+
+
+            }
+
+        </section>
+
+    </div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

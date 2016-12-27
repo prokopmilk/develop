@@ -16,7 +16,7 @@ namespace WebSite.Models
         public IEnumerable<New> News { get; set; }
         public Tovar tovar { get; set; }
         public Customer customer { get; set; }
-        public List<YandexMetrix> stats { get; set; }
+        
     }
     public class OrderAndTovarModel
     {

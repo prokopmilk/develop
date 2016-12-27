@@ -1,46 +1,4 @@
 $(function () {
-	//BEGIN AREA CHART
-    var d5_1 = [["Jan", 35],["Feb", 60],["Mar", 85],["Apr", 46],["May", 99],["Jun", 82],["Jul", 96]];
-    var d5_2 = [["Jan", 47],["Feb", 74],["Mar", 36],["Apr", 83],["May", 39],["Jun", 10],["Jul", 51]];
-    $.plot("#area-chart", [{
-        data: d5_1,
-        label: "New Visitor",
-        color: "#ffce54"
-    },{
-        data: d5_2,
-        label: "Returning Visitor",
-        color: "#87318c"
-    }], {
-        series: {
-            lines: {
-                show: !0,
-                fill: .8
-            },
-            points: {
-                show: !0,
-                radius: 4
-            }
-        },
-        grid: {
-            borderColor: "#fafafa",
-            borderWidth: 1,
-            hoverable: !0
-        },
-        tooltip: !0,
-        tooltipOpts: {
-            content: "%x : %y",
-            defaultTheme: false
-        },
-        xaxis: {
-            tickColor: "#fafafa",
-            mode: "categories"
-        },
-        yaxis: {
-            tickColor: "#fafafa"
-        },
-        shadowSize: 0
-    });
-    //END AREA CHART
 
     //BEGIN LINE CHART
     var d1_1 = [["Jan", 200],["Feb", 201],["Mar", 199],["Apr", 187],["May", 193],["Jun", 192],["Jul", 206],["Aug", 186],["Sep", 206]];
@@ -223,7 +181,48 @@ $(function () {
     });
     //END BAR CHART STACK
 
-    
+    //BEGIN AREA CHART
+    var d5_1 = [["Jan", 35],["Feb", 60],["Mar", 85],["Apr", 46],["May", 99],["Jun", 82],["Jul", 96]];
+    var d5_2 = [["Jan", 47],["Feb", 74],["Mar", 36],["Apr", 83],["May", 39],["Jun", 10],["Jul", 51]];
+    $.plot("#area-chart", [{
+        data: d5_1,
+        label: "New Visitor",
+        color: "#ffce54"
+    },{
+        data: d5_2,
+        label: "Returning Visitor",
+        color: "#87318c"
+    }], {
+        series: {
+            lines: {
+                show: !0,
+                fill: .8
+            },
+            points: {
+                show: !0,
+                radius: 4
+            }
+        },
+        grid: {
+            borderColor: "#fafafa",
+            borderWidth: 1,
+            hoverable: !0
+        },
+        tooltip: !0,
+        tooltipOpts: {
+            content: "%x : %y",
+            defaultTheme: false
+        },
+        xaxis: {
+            tickColor: "#fafafa",
+            mode: "categories"
+        },
+        yaxis: {
+            tickColor: "#fafafa"
+        },
+        shadowSize: 0
+    });
+    //END AREA CHART
 
     //BEGIN AREA CHART SPLINE
     var d6_1 = [["Jan", 67],["Feb", 91],["Mar", 36],["Apr", 150],["May", 28],["Jun", 123],["Jul", 38]];

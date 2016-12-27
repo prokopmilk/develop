@@ -21,6 +21,7 @@ namespace WebSite.Models
         public string PhoneNumber { get; set; }
         public string name { get; set; }
         public string adres { get; set; }
+        public string Email { get; set; }
         public string city { get; set; }
         public bool BrowserRemembered { get; set; }
     }

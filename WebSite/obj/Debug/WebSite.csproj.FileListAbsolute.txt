@@ -830,3 +830,7 @@ C:\Users\Maxim Vasin\Source\Repos\develop\WebSite\obj\Debug\WebSite.Migrations.R
 C:\Users\Maxim Vasin\Source\Repos\develop\WebSite\obj\Debug\WebSite.csproj.GenerateResource.Cache
 C:\Users\Maxim Vasin\Source\Repos\develop\WebSite\obj\Debug\Milk.dll
 C:\Users\Maxim Vasin\Source\Repos\develop\WebSite\obj\Debug\Milk.pdb
+C:\Users\Maxim\Source\Repos\develop\WebSite\obj\Debug\WebSite.csprojResolveAssemblyReference.cache
+C:\Users\Maxim\Source\Repos\develop\WebSite\bin\Twilio.Api.dll
+C:\Users\Maxim\Source\Repos\develop\WebSite\bin\Twilio.Api.pdb
+C:\Users\Maxim\Source\Repos\develop\WebSite\bin\Twilio.Api.xml

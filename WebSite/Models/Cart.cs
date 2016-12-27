@@ -35,6 +35,16 @@ namespace WebSite.Models
                 line.Quantity += quantity;
             }
         }
+        public void ChangeCountTovar(int ID, int Quantity)
+        {
+            CartLine line = lineCollection
+                .Where(g => g.tovar.Tovar_ID == ID)
+                .FirstOrDefault();
+            if (line != null)
+            {
+               line.Quantity = Quantity;
+            }
+        }
         public int GetCountTovar()
         {
             return lineCollection.Sum(t => t.Quantity);
